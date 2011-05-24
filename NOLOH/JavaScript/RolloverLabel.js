@@ -1,0 +1,1 @@
+function _NRlLblTgl(c,b){var a=_N(c);if(a.Selected&&b!="Slct"||a.Cur==b){return}_NRlLblSetClr(c,a[b]);a.Cur=b;if(a.onchange){a.onchange()}}function _NRlLblSetClr(b,a){if(a instanceof Array){_NSetProperty(b,"style.color",a[0]);_NSetProperty(b,"style.background",a[1])}else{_NSetProperty(b,"style.color",a)}};

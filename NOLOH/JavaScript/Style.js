@@ -1,0 +1,1 @@
+function _NStyleRem(a,b){_N("NHead").removeChild(_N(a));var c=document.createElement("LINK");c.rel="stylesheet";c.type="text/css";c.href=b+"Styles/Blank.css";_N("NHead").appendChild(c);_N("NHead").removeChild(c)};
