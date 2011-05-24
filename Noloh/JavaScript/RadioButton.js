@@ -1,1 +1,0 @@
-function _NRBSave(g){if(_N(g).Selected!=true){var d,a,f,e=[];var c=_N(g+"I");var b=document.getElementsByName(c.name);for(d=0;d<b.length;++d){if(b[d].tagName=="INPUT"){a=b[d].id.replace("I","");_NSave(a,"Selected",a==g)}}for(d=0;d<b.length;++d){if(b[d].tagName=="INPUT"){f=_N(a=b[d].id.replace("I",""));_NChange(a,"Selected",a==g);if(f.onchange){f.onchange()}}}}};

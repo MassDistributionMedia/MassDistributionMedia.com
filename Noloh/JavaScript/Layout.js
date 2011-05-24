@@ -1,1 +1,0 @@
-function VAlign(b,a){_NSet(b,(a||"style.top"),((_N(b).parentNode.offsetHeight-_N(b).offsetHeight)/2)+"px")}function HAlign(b,a){_NSet(b,(a||"style.left"),((_N(b).parentNode.offsetWidth-_N(b).offsetWidth)/2)+"px")};

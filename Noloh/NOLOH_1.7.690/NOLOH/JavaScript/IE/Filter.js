@@ -1,1 +1,0 @@
-function _NFilter(d,c,a){var b=_N(d).value+String.fromCharCode(event.keyCode);if(!b.match(new RegExp("^"+c+"$",a))){event.returnValue=false}};

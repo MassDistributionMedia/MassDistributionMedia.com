@@ -1,1 +1,0 @@
-function _NMkupSet(b,a){_N(b).innerHTML=a.replace(/<NQt2>/g,'"').replace(/<NQt1>/g,"'").replace(/<Nendl>/g,"\n")};

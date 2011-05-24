@@ -1,1 +1,0 @@
-function _NChkCond(c,b,d){var a=setInterval(function(){if(c()){var e=b();clearInterval(a);if(d){d(e)}}},100)};
