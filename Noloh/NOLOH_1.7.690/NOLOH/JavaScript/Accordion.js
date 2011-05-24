@@ -1,0 +1,1 @@
+function _NAccPtAdd(a,b){var c=_N(a);if(c.AccordionParts==null){c.AccordionParts=[]}c.AccordionParts[c.AccordionParts.length]=b;c.TitleHeight+=_N(_N(b).Top).offsetHeight}function _NAccPtExpd(b){var a=_N(b);_NClpsPnlSetHgt(a.id,(parseInt(_N(a.Accord).offsetHeight)-_N(a.Accord).TitleHeight+_N(a.Top).offsetHeight))}function _NAccPtRm(a,b){_N(a).AccordionParts.splice(b,1)};

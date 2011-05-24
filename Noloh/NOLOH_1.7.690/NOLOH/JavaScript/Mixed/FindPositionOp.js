@@ -1,0 +1,1 @@
+function _NFindX(b,c){var a=0,d=_N(b);if(d.offsetParent){while(d.offsetParent&&((!c)||(d.id!=c))){a+=d.offsetLeft;d=d.offsetParent}}else{if(d.x){a+=d.x}}return a}function _NFindY(a,c){var b=0,d=_N(a);if(d.offsetParent){while(d.offsetParent&&((!c)||(d.id!=c))){b+=d.offsetTop;d=d.offsetParent}}else{if(d.y){b+=d.y}}return b};
