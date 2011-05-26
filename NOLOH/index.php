@@ -4,7 +4,7 @@ An example demonstrating an Alert of HelloWorld
 Difficulty level: Beginner */
 
 //Includes NOLOH for your project. This is all you need to do to use NOLOH.
-require_once('/NOLOH/NOLOH.php');
+require_once('/NOLOH.php');
 
 /* Your application must have one class that extends WebPage,
    this will be used as the starting point for your application. */
