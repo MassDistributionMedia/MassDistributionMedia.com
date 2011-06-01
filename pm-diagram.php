@@ -24,7 +24,7 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://massdistributionmedia.com/style.css');
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		// Instantiate our moving panel and give it some basic visual properties: a background color and a mouse cursor
-		$this->Controls->Add($this->MovingPanel = new Panel(350, 200, 400, 400));
+		$this->Controls->Add($this->MovingPanel = new Panel(350, 200, '100%', '100%'));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		$this->MovingPanel->Cursor = Cursor::Move;
 		/* The following line allows the user to drag the panel around.
