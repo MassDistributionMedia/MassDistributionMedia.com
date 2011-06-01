@@ -26,7 +26,7 @@ class Moving extends WebPage
 		// Instantiate our moving panel and give it some basic visual properties: a background color and a mouse cursor
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 13, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
-		$this->MovingPanel->Cursor = Cursor::url('http://gif.161.be/grab.gif');
+		$this->MovingPanel->Cursor = Cursor::URL('http://gif.161.be/grab.gif');
 		/* The following line allows the user to drag the panel around.
 		   It is read as "the MovingPanel Shifts its own Location."
 		   Whenever a Shift static (rather than Shift::With, which we'll get to later) is added to a Control's Shifts
