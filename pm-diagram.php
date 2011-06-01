@@ -22,14 +22,14 @@ class Moving extends WebPage
         {
                 $this->Controls->Add($this->zoomHowPanel = new Panel(77, 77, 333, 333));
                 $this->zoomHow->CSSClass = 'zoomHow';
-				$this->zoomHow->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, null, null));
-                $this->zoomHow->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 33, '50%', null));
-				$this->zoomHow->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
-				$this->zoomHow->Controls->Add($this->closeZoomHow = new Button("Close"));
+				$this->zoomHowPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, null, null));
+                $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 33, '50%', null));
+				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
+				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close"));
 				
 				$closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 			/* $this->zoomHow->Controls->Add::Border("2pm solid pink"); */
-                $this->zoomHow->Shifts[] = Shift::Location($this->zoomHow);
+                $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHow);
         }
 		
 		public function closeZ(){
