@@ -27,7 +27,7 @@ class Moving extends WebPage
 				$this->zoomHow->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
 				$this->zoomHow->Controls->Add($this->closeZoomHow = new Button("Close"));
 				
-				public function closeZ(){
+				 function closeZ(){
 					$this->zoomHow->Leave();
 				}
 				
