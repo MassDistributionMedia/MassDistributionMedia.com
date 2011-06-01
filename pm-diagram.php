@@ -12,7 +12,7 @@ class Moving extends WebPage
 		parent::WebPage('Project Process Diagram - MDM');
 		$this->CSSFiles->Add('http://massdistributionmedia.com/style.css');
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
-		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", auto, 13, null, null));
+		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", 'auto', 13, null, null));
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 77, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
