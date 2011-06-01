@@ -29,16 +29,17 @@ class Moving extends WebPage
 		   creating a dragging behavior; i.e., it will start when a user's left mouse button is pressed, 
 		   and stop when that button is released. */
 		$this->MovingPanel->Shifts[] = Shift::Location($this->MovingPanel);
-	
-	
-		/* $this->Controls->Add($this->zoomHow = new Panel(77, 77, 333, 333));
-		$this->zoomHow->CSSClass = 'zoomHow';
-		$ctrlImg = new Image("http://png.161.be/ctrl_key.png", null, null);
-		$this->Controls->Add($ctrlImg);
-		$this->zoomHow->Shifts[] = Shift::Location($this->zoomHow); */
-	
 		
 	}
+	
+	   function zoomHow()
+        {
+                $this->Controls->Add($this->zoomHow = new Panel(77, 77, 333, 333));
+                $this->zoomHow->CSSClass = 'zoomHow';
+                $ctrlImg = new Image("http://png.161.be/ctrl_key.png", 10, 10, null, null);
+                $this->Controls->Add($ctrlImg);
+                $this->zoomHow->Shifts[] = Shift::Location($this->zoomHow);
+        }
 	
 }
 ?>
