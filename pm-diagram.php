@@ -20,7 +20,7 @@ class Moving extends WebPage
 	
 	   public function zoomHow()
         {
-                $this->Controls->Add($this->zoomHow = new Panel(77, 77, 333, 333));
+                $this->Controls->Add($this->zoomHowPanel = new Panel(77, 77, 333, 333));
                 $this->zoomHow->CSSClass = 'zoomHow';
 				$this->zoomHow->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, null, null));
                 $this->zoomHow->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 33, '50%', null));
@@ -33,7 +33,7 @@ class Moving extends WebPage
         }
 		
 		public function closeZ(){
-					$this->zoomHow->Leave();
+					$this->zoomHowPanel->Leave();
 				}
 				
 
