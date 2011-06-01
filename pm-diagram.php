@@ -29,8 +29,6 @@ class Moving extends WebPage
 		   creating a dragging behavior; i.e., it will start when a user's left mouse button is pressed, 
 		   and stop when that button is released. */
 		$this->MovingPanel->Shifts[] = Shift::Location($this->MovingPanel);
-		
-	}
 	
 	function zoomHow()
 	{
@@ -39,6 +37,8 @@ class Moving extends WebPage
 		$ctrlImg = new Image("http://png.161.be/ctrl_key.png", 10, 10);
 		$this->Controls->Add($ctrlImg);
 		$this->zoomHow->Shifts[] = Shift::Location($this->zoomHow);
+	}
+		
 	}
 	
 }
