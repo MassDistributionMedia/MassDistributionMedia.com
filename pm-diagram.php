@@ -24,7 +24,7 @@ class Moving extends WebPage
                 $this->zoomHow->CSSClass = 'zoomHow';
 				$this->zoomHow->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, null, null));
                 $this->zoomHow->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 33, '50%', null));
-				$this->zoomHow->Text = Text::dasfl;jsdlfkjdslkf;
+				$this->zoomHow->Text = Text::dasfljsdlfkjdslkf;
 			/* $this->zoomHow->Controls->Add::Border("2pm solid pink"); */
                 $this->zoomHow->Shifts[] = Shift::Location($this->zoomHow);
         }
