@@ -23,7 +23,7 @@ class Moving extends WebPage
                 $this->Controls->Add($this->zoomHow = new Panel(77, 77, 333, 333));
                 $this->zoomHow->CSSClass = 'zoomHow';
                 $ctrlImg = new Image("http://png.161.be/ctrl_key.png", 10, 10, null, null);
-                $this->Controls->Add($ctrlImg->zoomHow);
+                $this->Controls->Add($ctrlImg->$this);
                 $ctrlImg->Shifts[] = Shift::Location($this->zoomHow);
         }
 
