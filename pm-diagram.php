@@ -1,6 +1,6 @@
 <?php
 
-require_once('/NOLOH/NOLOH.php');
+require_once('NOLOH/NOLOH.php');
 
 /* Moving
 An example demonstrating Shift and Animate
