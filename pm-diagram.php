@@ -40,7 +40,6 @@ class Moving extends WebPage
                 $this->zoomHow->CSSClass = 'zoomHow';
                 $ctrlImg = new Image("http://png.161.be/ctrl_key.png", 10, 10, null, null);
                 $this->Controls->Add($ctrlImg);
-                $this->zoomHow->Shifts[] = Shift::Location($this->zoomHow);
 				$ctrlImg->Shifts[] = Shift::Location($this->zoomHow);
         }
 
