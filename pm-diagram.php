@@ -28,9 +28,9 @@ class Moving extends WebPage
 		   ArrayList, it is always understood that this is shifting while the mouse is held down, 
 		   creating a dragging behavior; i.e., it will start when a user's left mouse button is pressed, 
 		   and stop when that button is released. */
+		$this->MovingPanel->Shifts[] = Shift::Location($this->MovingPanel);
 		
 	}
-	
 	
 }
 ?>
