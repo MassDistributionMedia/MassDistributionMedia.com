@@ -29,7 +29,7 @@ class Moving extends WebPage
 				
 				$closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 			/* $this->zoomHow->Controls->Add::Border("2pm solid pink"); */
-                $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHow);
+                $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
         }
 		
 		public function closeZ(){
