@@ -26,6 +26,12 @@ class Moving extends WebPage
                 $this->zoomHow->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 33, '50%', null));
 				$this->zoomHow->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
 				$this->zoomHow->Controls->Add($this->closeZoomHow = new Button("Close"));
+				
+				public function closeZ(){
+					$this->zoomHow->Leave();
+				}
+				
+				
 				$closeZoomHow->Click = new ServerEvent($this, $this->zoomHow->Leave());
 			/* $this->zoomHow->Controls->Add::Border("2pm solid pink"); */
                 $this->zoomHow->Shifts[] = Shift::Location($this->zoomHow);
