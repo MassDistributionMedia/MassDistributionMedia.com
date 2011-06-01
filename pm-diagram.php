@@ -27,15 +27,15 @@ class Moving extends WebPage
 				$this->zoomHow->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
 				$this->zoomHow->Controls->Add($this->closeZoomHow = new Button("Close"));
 				
-				 function closeZ(){
-					$this->zoomHow->Leave();
-				}
-				
-				
 				$closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 			/* $this->zoomHow->Controls->Add::Border("2pm solid pink"); */
                 $this->zoomHow->Shifts[] = Shift::Location($this->zoomHow);
         }
+		
+		public function closeZ(){
+					$this->zoomHow->Leave();
+				}
+				
 
 }
 	
