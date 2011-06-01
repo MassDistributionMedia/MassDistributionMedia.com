@@ -18,7 +18,7 @@ class Moving extends WebPage
 		  $this->zoomHow();
 	}
 	
-	  function zoomHow()
+	   public function zoomHow()
         {
                 $this->Controls->Add($this->zoomHow = new Panel(77, 77, 333, 333));
                 $this->zoomHow->CSSClass = 'zoomHow';
