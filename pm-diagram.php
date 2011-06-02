@@ -22,7 +22,7 @@ class Moving extends WebPage
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
-		$nav = new Panel(0, 111, 600, 30);
+		$nav = new Panel(0, 104, '100%', 30);
 		
 		$sections = array('Home', 'About', 'Contact', 'Products');
 		
@@ -35,7 +35,8 @@ class Moving extends WebPage
 				
 		$nav->Controls->AllCSSMarginRight = '31px';
 		$nav->Controls->AllLayout = Layout::Relative;
-		$nav->CSSTextAlign = 'right';
+		$nav->CSSMarginLeft = $nav->CSSMarginRight = System::Auto;
+		
 		
 	/*	$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
 		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
