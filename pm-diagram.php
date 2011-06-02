@@ -24,7 +24,7 @@ class Moving extends WebPage
 		$this->headerPanel->Controls = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 0, 0, 80, 24);
 		$this->headerPanel->Controls = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 0, 0, 80, 24);
 		$this->headerPanel->Controls = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 0, 0, 80, 24);
-		$this->headerPanel->CSSTextAlign = 'center';
+		/* $this->headerPanel->CSSTextAlign = 'center'; */
 		$this->homeLink->CSSDisplay = 'block';
 		$this->aboutLink->CSSDisplay = 'block';
 		$this->contactLink->CSSDisplay = 'block';
