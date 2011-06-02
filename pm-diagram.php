@@ -40,7 +40,7 @@ class Moving extends WebPage
         }
 		
 		public function closeZ(){
-					$this->zoomHowPanel->Leave();
+					$this->howPanel->Leave();
 				}
 				
 		public function nextArrows(){
