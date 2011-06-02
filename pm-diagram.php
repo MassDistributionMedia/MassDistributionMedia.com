@@ -95,10 +95,10 @@ class Moving extends WebPage
 				$this->howArrowsPanel->CSSClass = "zoomHowPanel";
 				$this->howArrowsPanel->backColor = "#fff";				
 				$this->howArrowsPanel->Controls->Add($this->arrowImg = new Image("http://png.161.be/dec-arrow-keys.png", 10, 10, '50%', null));
-				
-				$this->arrowImg->CSSMargin= '133px 239px';
+				$this->arrowImg->Layout= Layout::Center;				
+				$this->arrowImg->CSSMarginTop= '99px';
 
-				$this->howArrowsPanel->Controls->Add($this->zoomArrowLabel = new Label("Use the arrow keys to navigate the diagram"));
+				$this->howArrowsPanel->Controls->Add($this->zoomArrowLabel = new Label("Use the arrow keys to navigate the diagram."));
 				$this->zoomArrowLabel->CSSFontSize= 17;
 				$this->zoomArrowLabel->Width= '100%';
 				$this->zoomArrowLabel->Height= 14;
