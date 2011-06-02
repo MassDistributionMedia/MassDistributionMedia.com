@@ -14,6 +14,7 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", null, 13, null, null));
 		$this->mdmLogo->CSSClass = 'mdmLogo';
+		$mdmLogo->CSSMargin = "auto";
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 77, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
@@ -29,7 +30,7 @@ class Moving extends WebPage
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close"));
 				
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
-			    $this->zoomHowPanel->CSSBorder= "2pm solid grey";
+			    $this->zoomHowPanel->CSSBorder= "2px solid pink";
                 $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
         }
 		
