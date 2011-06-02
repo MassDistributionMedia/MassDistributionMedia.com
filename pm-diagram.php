@@ -28,12 +28,12 @@ class Moving extends WebPage
 		$this->homeLink->CSSDisplay = 'block';
 		$this->aboutLink->CSSDisplay = 'block';
 		$this->contactLink->CSSDisplay = 'block';
-		$this->servicesLink->CSSDisplay = 'block'; */
+		$this->servicesLink->CSSDisplay = 'block'; 
 		
 		$this->homeLink->Layout = Layout::Relative;
 		$this->aboutLink->Layout = Layout::Relative;
 		$this->contactLink->Layout = Layout::Relative;
-		$this->servicesLink->Layout = Layout::Relative;
+		$this->servicesLink->Layout = Layout::Relative; */
 
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
