@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton, $zoomHowInner;
 	
 	
 	function Moving()
@@ -24,23 +24,24 @@ class Moving extends WebPage
 	   public function zoomHow()
         {
                 $this->Controls->Add($this->zoomHowPanel = new Panel(222, 133, 555, 303));
-				$this->zoomHowPanel->CSSClass = "zoomHowPanel";
-				$this->zoomHowPanel->backColor = "#fff";
-				$this->zoomHowPanel->CSSBorder= "7px solid #777";
-			    $this->zoomHowPanel->CSSBorderRadius= "7px";
-                $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
+				$this->Controls->Add($this->zoomHowInner = new Panel(222, 133, 555, 303));
+				$this->zoomHowInner->CSSClass = "zoomHowPanel";
+				$this->zoomHowInner->backColor = "#fff";
+				$this->zoomHowInner->CSSBorder= "7px solid #777";
+			    $this->zoomHowInner->CSSBorderRadius= "7px";
+                $this->zoomHowInner->Shifts[] = Shift::Location($this->zoomHowPanel);
 				
-				$this->zoomHowPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
+				$this->zoomHowInner->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
 				
-                $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
+                $this->zoomHowInner->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
 				$this->mouseImg->Layout= Layout::Right;
-				$this->zoomHowPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
+				$this->zoomHowInner->Controls->Add($this->zoomHowPlus = new Label("+"));
 				$this->zoomHowPlus->CSSMargin= '133px 239px'; 
 				$this->zoomHowPlus->FontSize= 33;
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
 
-				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Press \"Control + Scroll\" to Zoom."));
+				$this->zoomHowInner->Controls->Add($this->zoomHowLabel = new Label("Press \"Control + Scroll\" to Zoom."));
 				$this->zoomHowLabel->CSSFontSize= 17;
 				$this->zoomHowLabel->Width= '100%';
 				$this->zoomHowLabel->Height= 14;
@@ -50,7 +51,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
 				$this->zoomHowLabel->Cursor= Cursor::Move;
 				
-				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
+				$this->zoomHowInner->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
 				$this->closeZoomHow->BackColor= '#E1E0E0';
 				$this->closeZoomHow->Color= '#333333';
 				$this->closeZoomHow->CSSFontWeight= 'bold';
@@ -58,7 +59,7 @@ class Moving extends WebPage
 				$this->closeZoomHow->CSSBorderRadius= "2px";
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 				
-				$this->zoomHowPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
+				$this->zoomHowInner->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
 				$this->nextButton->BackColor= '#E1E0E0';
 				$this->nextButton->Color= '#333333';
 				$this->nextButton->CSSFontWeight= 'bold';
