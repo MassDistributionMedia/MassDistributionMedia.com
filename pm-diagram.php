@@ -17,6 +17,11 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://massdistributionmedia.com/style.css');
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		
+		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
+		$this->mdmLogo->Layout= Layout::Center;
+		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
+		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
+		
 		$this->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 31, 116, 80, 24);
 		$this->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 31, 116, 80, 24);
 		$this->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 31, 116, 80, 24);
@@ -26,20 +31,15 @@ class Moving extends WebPage
 		$this->contactLink->CSSDisplay = 'block';
 		$this->servicesLink->CSSDisplay = 'block';
 		
-	/*	$this->homeLink->Layout = Layout::Relative;
+		$this->homeLink->Layout = Layout::Relative;
 		$this->aboutLink->Layout = Layout::Relative;
 		$this->contactLink->Layout = Layout::Relative;
-		$this->servicesLink->Layout = Layout::Relative; */
+		$this->servicesLink->Layout = Layout::Relative;
 		
 		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
 		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
 		$this->contactLink->CSSMarginLeft = $this->contactLink->CSSMarginRight = System::Auto;
 		$this->servicesLink->CSSMarginLeft = $this->servicesLink->CSSMarginRight = System::Auto;
-		
-		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
-		$this->mdmLogo->Layout= Layout::Center;
-		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
-		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
 		$this->howTour();
 	}
