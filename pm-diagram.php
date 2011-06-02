@@ -28,9 +28,10 @@ class Moving extends WebPage
                 $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 33, '50%', null));
 				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close"));
+				$this->zoomHowPanel->CSSFloat= "right";
 				
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
-			    $this->zoomHowPanel->CSSBorder= "2px solid grey";
+			    $this->zoomHowPanel->CSSBorder= "1px solid #777";
                 $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
         }
 		
