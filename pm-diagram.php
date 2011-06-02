@@ -29,7 +29,8 @@ class Moving extends WebPage
 				$this->zoomHowPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, null, null));
                 $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 33, '50%', null));
 				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
-				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", 33, 77, null, null));
+				$this->zoomHowPanel->Width = "99px";
+				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, null));
 				$this->closeZoomHow->CSSFloat= "right";
 				
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
