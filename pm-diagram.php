@@ -24,17 +24,19 @@ class Moving extends WebPage
 		
 		$nav = new Panel(0, 104, 1673, 30);
 		
-		$sections = array(
-		'Home' => 'http://massdistributionmedia.com',
-		'About' => 'http://massdistributionmedia.com/about.html',
-	    'Contact' => 'http://massdistributionmedia.com/contact.html',
-		'Products' => 'http://massdistributionmedia.com/portfolio.html');
+		 $navLinks = array(
+		 'http://massdistributionmedia.com',
+		 'http://massdistributionmedia.com/about.html',
+		 'http://massdistributionmedia.com/contact.html',
+		 'http://massdistributionmedia.com/portfolio.html');
+		 
+		$sections = array('Home','About',  'Contact' , 'Products');
 		
 				$this->Controls->AddRange($nav);
 
 			
 		foreach($sections as $section)
-			$nav->Controls->Add(new Link($navLinks, $section, 0, 5))
+			$nav->Controls->Add(new Link($navLinks as $navLinks, $section, 0, 5))
 				->Click = new ServerEvent($this, 'LoadSection', null, $section);
 				
 		$nav->Controls->AllCSSMarginRight = '31px';
