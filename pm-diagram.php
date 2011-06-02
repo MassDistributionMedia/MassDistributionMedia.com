@@ -7,6 +7,7 @@ class Moving extends WebPage
 
 	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus;
 	
+	
 	function Moving()
 	{
 		parent::WebPage('Project Process Diagram - MDM');
@@ -43,7 +44,8 @@ class Moving extends WebPage
 				$this->zoomHowLabel->CSSPadding= '11px 13px';
 				$this->zoomHowLabel->backColor= '#F1F1F1'; 
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
-				$this->zoomHowLabel->Cursor= URL('http://gif.mdm.cc/grab.gif');
+				$grabImg = 'http://gif.mdm.cc/grab.gif';
+				$this->zoomHowLabel->Cursor= URL(grabImg);
 				
 				/* $this->zoomHowLabel->CSSMargin= '5px 13px'; */
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
