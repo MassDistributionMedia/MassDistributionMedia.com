@@ -26,10 +26,10 @@ class Moving extends WebPage
 		$this->contactLink->CSSDisplay = 'block';
 		$this->servicesLink->CSSDisplay = 'block';
 		
-		$this->homeLink->Layout = Layout::Relative;
+	/*	$this->homeLink->Layout = Layout::Relative;
 		$this->aboutLink->Layout = Layout::Relative;
 		$this->contactLink->Layout = Layout::Relative;
-		$this->servicesLink->Layout = Layout::Relative;
+		$this->servicesLink->Layout = Layout::Relative; */
 		
 		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
 		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
