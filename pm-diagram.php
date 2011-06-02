@@ -8,7 +8,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel;
 	
 	
 	function Moving()
@@ -22,10 +22,11 @@ class Moving extends WebPage
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
-		$this->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 39, 80, 24);
-		$this->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 51, 39, 80, 24);
-		$this->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 82, 39, 80, 24);
-		$this->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 103, 39, 80, 24);
+		
+		$this->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 78, 80, 24);
+		$this->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 51, 0, 80, 24);
+		$this->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 82, 0, 80, 24);
+		$this->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 103, 0, 80, 24);
 		$this->homeLink->CSSDisplay = 'block';
 		$this->aboutLink->CSSDisplay = 'block';
 		$this->contactLink->CSSDisplay = 'block';
