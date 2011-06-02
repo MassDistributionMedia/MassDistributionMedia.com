@@ -50,7 +50,7 @@ class Moving extends WebPage
 				
 		public function nextArrows(){
 					$this->howZoomPanel->Visible = false;
-					$this->howArrowsPanel->Visible = true;
+					$this->howArrows();
 				}
 				
 		public function arrowZoom(){
