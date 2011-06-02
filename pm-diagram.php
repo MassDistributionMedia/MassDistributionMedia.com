@@ -35,7 +35,7 @@ class Moving extends WebPage
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
 
-				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Press Control + Scroll to Zoom."));
+				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Press \"Control + Scroll\" to Zoom."));
 				$this->zoomHowLabel->CSSFontSize= 17;
 				$this->zoomHowLabel->Width= '100%';
 				$this->zoomHowLabel->Height= 14;
@@ -47,6 +47,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->Cursor= URL($grabImg); */
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
 				$this->closeZoomHow->Layout= Layout::Right;
+				$this->closeZoomHow->Width= '100%';
 				
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 			    $this->zoomHowPanel->CSSBorder= "7px solid #777";
