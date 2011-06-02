@@ -33,7 +33,7 @@ class Moving extends WebPage
 			$nav->Controls->Add(new Link(null, $section, 0, 5))
 				->Click = new ServerEvent($this, 'LoadSection', null, $section);
 				
-		$nav->Controls->AllCSSMarginRight = '5px';
+		$nav->Controls->AllCSSMarginRight = '31px';
 		$nav->Controls->AllLayout = Layout::Relative;
 		$nav->CSSTextAlign = 'right';
 		
