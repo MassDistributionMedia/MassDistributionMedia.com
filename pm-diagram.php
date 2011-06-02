@@ -18,10 +18,14 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		
 		$this->Controls->Add($this->headerPanel = new Panel('40%', 78, '100%', null));
-		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
-		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 31, 0, 80, 24);
-		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 62, 0, 80, 24);
-		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 93, 0, 80, 24);
+		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', null, 0, 80, 24);
+		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', null, 0, 80, 24);
+		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', null, 0, 80, 24);
+		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', null, 0, 80, 24);
+		$this->homeLink->CSSMargin= '31px';
+		$this->aboutLink->CSSMargin= '31px';
+		$this->contactLink->CSSMargin= '31px';
+		$this->servicesLink->CSSMargin= '31px';
 
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
