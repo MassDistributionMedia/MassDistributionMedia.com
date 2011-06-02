@@ -40,7 +40,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->Width= '100%';
 				$this->zoomHowLabel->Height= 26;
 				$this->zoomHowLabel->CSSFontWeight= 'bold';
-				$this->zoomHowLabel->CSSMargin= '5px 13px'; 
+				$this->zoomHowLabel->CSSPadding= '5px 13px'; 
 				$this->zoomHowLabel->backColor= '#F1F1F1'; 
 				/* $this->zoomHowLabel->CSSMargin= '5px 13px'; */
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
