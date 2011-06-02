@@ -54,10 +54,17 @@ class Moving extends WebPage
 				$this->closeZoomHow->BackColor= '#E1E0E0';
 				$this->closeZoomHow->Color= '#333333';
 				$this->closeZoomHow->CSSFontWeight= 'bold';
-				/* $this->closeZoomHow->Border= '1px solid #888'; */
 				$this->closeZoomHow->CSSPadding= '4px';
 				$this->closeZoomHow->CSSBorderRadius= "2px";
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
+				
+				$this->zoomHowPanel->Controls->Add($this->nextButton = new Button("Next", 454, 267, null, null));
+				$this->closeZoomHow->BackColor= '#E1E0E0';
+				$this->closeZoomHow->Color= '#333333';
+				$this->closeZoomHow->CSSFontWeight= 'bold';
+				$this->closeZoomHow->CSSPadding= '4px';
+				$this->closeZoomHow->CSSBorderRadius= "2px";
+				/* $this->closeZoomHow->Click = new ServerEvent($this, 'closeZ'); */
 			    
         }
 		
