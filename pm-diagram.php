@@ -22,7 +22,7 @@ class Moving extends WebPage
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
-	/*	$nav = new Panel(0, 104, 1673, 30);
+		$nav = new Panel(0, 104, 1673, 30);
 		
 		$sections = array('Home', 'About', 'Contact', 'Products');
 		
@@ -35,35 +35,34 @@ class Moving extends WebPage
 				
 		$nav->Controls->AllCSSMarginRight = '31px';
 		$nav->Controls->AllLayout = Layout::Relative;
-		$nav->CSSTextAlign = 'center'; */
+		$nav->CSSTextAlign = 'center';
 		
-		$this->Controls->Add($this->headerPanel = new Panel(null, 78, 1673, 13));
+	/*	$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
 		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
 		$this->headerPanel->Layout = Layout::Relative;
-		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', null, null, null, null);
-		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', null, null, null, null);
-		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', null, null, null, null);
-		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', null, null, null, null);
+		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
+		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 52, 0, 80, 24);
+		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 0, 82, 80, 24);
+		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 0, 103, 80, 24);
+		$this->homeLink->CSSDisplay = 'block';
+		$this->aboutLink->CSSDisplay = 'block';
+		$this->contactLink->CSSDisplay = 'block';
+		$this->servicesLink->CSSDisplay = 'block';
 		
 		$this->homeLink->Layout = Layout::Relative;
 		$this->aboutLink->Layout = Layout::Relative;
 		$this->contactLink->Layout = Layout::Relative;
-		$this->servicesLink->Layout = Layout::Relative; 
+		$this->servicesLink->Layout = Layout::Relative;
 		
-		/* $headerPanel->AllLayout = Layout::Relative;
-		$headerPanel->Controls->AllCSSMarginRight = '31px';
-		$headerPanel->CSSTextAlign = 'center'; */
-
-		
-	$homeLink->Controls->CSSMarginRight = '31px';
+		$homeLink->Controls->CSSMarginRight = '31px';
 		$aboutLink->Controls->CSSMarginRight = '31px';
 		$contactLink->Controls->CSSMarginRight = '31px';
-		$servicesLink->Controls->CSSMarginRight = '31px'; 
+		$servicesLink->Controls->CSSMarginRight = '31px';
 		
 		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
 		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
 		$this->contactLink->CSSMarginLeft = $this->contactLink->CSSMarginRight = System::Auto;
-		$this->servicesLink->CSSMarginLeft = $this->servicesLink->CSSMarginRight = System::Auto; 
+		$this->servicesLink->CSSMarginLeft = $this->servicesLink->CSSMarginRight = System::Auto; */
 		
 		$this->howTour();
 	}
