@@ -25,6 +25,8 @@ class Moving extends WebPage
         {
                 $this->Controls->Add($this->zoomHowPanel = new Panel(222, 133, 555, 303));
 				$this->zoomHowPanel->Controls->Add($this->zoomHowInner = new Panel(null, null, null, null));
+				$this->zoomHowInner->Width= 563;
+				$this->zoomHowInner->Height= 311;
 				$this->zoomHowInner->CSSClass = "zoomHowPanel";
 				$this->zoomHowInner->backColor = "#fff";
 				$this->zoomHowInner->CSSBorder= "7px solid #777";
