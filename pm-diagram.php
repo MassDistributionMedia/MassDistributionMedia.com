@@ -22,11 +22,13 @@ class Moving extends WebPage
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
-		
-		$this->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 78, 80, 24);
-		$this->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 51, 78, 80, 24);
-		$this->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 82, 0, 80, 24);
-		$this->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 103, 0, 80, 24);
+		$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
+		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
+		$this->headerPanel->Layout = Layout::Relative;
+		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
+		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 51, 0, 80, 24);
+		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 82, 0, 80, 24);
+		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 103, 0, 80, 24);
 		$this->homeLink->CSSDisplay = 'block';
 		$this->aboutLink->CSSDisplay = 'block';
 		$this->contactLink->CSSDisplay = 'block';
