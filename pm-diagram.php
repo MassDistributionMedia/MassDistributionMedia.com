@@ -8,7 +8,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $logoLink;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel;
 	
 	
 	function Moving()
@@ -19,9 +19,23 @@ class Moving extends WebPage
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
 		$this->mdmLogo->Layout= Layout::Center;
-		$this->mdmLogo->Controls = $this->logoLink = new Link('http://massdistributionmedia.com');
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
+		
+		$nav = new Panel(0, 0, 600, 30);
+		
+		$sections = array('Home', 'About', 'Contact', 'Products');
+		
+				$this->Controls->AddRange($nav);
+
+			
+		foreach($sections as $section)
+			$nav->Controls->Add(new Link(null, $section, 0, 5))
+				->Click = new ServerEvent($this, 'LoadSection', null, $section);
+				
+		$nav->Controls->AllCSSMarginRight = '5px';
+		$nav->Controls->AllLayout = Layout::Relative;
+		$nav->CSSTextAlign = 'right';
 		
 	/*	$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
 		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
