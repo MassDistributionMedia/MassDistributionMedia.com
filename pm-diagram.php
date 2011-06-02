@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(E_ALL & ~E_NOTICE);
 ini_set('display_errors', '1');
 
 require_once('NOLOH/NOLOH.php');
@@ -21,7 +21,7 @@ class Moving extends WebPage
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 111, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
-		  $this->howTour();
+		$this->howTour();
 	}
 	
 	   public function howTour()
@@ -110,7 +110,7 @@ class Moving extends WebPage
 				$this->zoomArrowLabel->Height= 14;
 				$this->zoomArrowLabel->CSSFontWeight= 'bold';
 				$this->zoomArrowLabel->CSSPadding= '11px 13px';
-				$this->zoomArrowLabel->backColor= '#F1F1F1'; 
+				$this->zoomArrowLabel->BackColor= '#F1F1F1'; 
 				$this->zoomArrowLabel->CSSDisplay= 'block'; 
 				$this->zoomArrowLabel->Cursor= Cursor::Move;
 				
