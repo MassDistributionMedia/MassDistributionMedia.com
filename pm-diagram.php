@@ -23,7 +23,7 @@ class Moving extends WebPage
 	
 	   public function zoomHow()
         {
-                $this->Controls->Add($this->zoomHowPanel = new Panel(222, '17%', 555, 303));
+                $this->Controls->Add($this->zoomHowPanel = new Panel(222, null, 555, 303));
 				$this->zoomHowPanel->CSSClass = "zoomHowPanel";
 				$this->zoomHowPanel->backColor = "#fff";
 				$this->zoomHowPanel->CSSBorder= "7px solid #777";
@@ -58,7 +58,7 @@ class Moving extends WebPage
 				$this->closeZoomHow->CSSBorderRadius= "2px";
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 				
-				$this->zoomHowPanel->Controls->Add($this->nextButton = new Button("Next", 454, 267, null, null));
+				$this->zoomHowPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
 				$this->nextButton->BackColor= '#E1E0E0';
 				$this->nextButton->Color= '#333333';
 				$this->nextButton->CSSFontWeight= 'bold';
