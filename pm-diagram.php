@@ -26,7 +26,12 @@ class Moving extends WebPage
                 $this->Controls->Add($this->zoomHowPanel = new Panel(222, '17%', 555, 303));
 				$this->zoomHowPanel->CSSClass = "zoomHowPanel";
 				$this->zoomHowPanel->backColor = "#fff";
+				$this->zoomHowPanel->CSSBorder= "7px solid #777";
+			    $this->zoomHowPanel->CSSBorderRadius= "7px";
+                $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
+				
 				$this->zoomHowPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
+				
                 $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
 				$this->mouseImg->Layout= Layout::Right;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
@@ -48,12 +53,11 @@ class Moving extends WebPage
 				
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", 513, 212, null, null));
 				$this->closeZoomHow->BackColor= '#E1E0E0';
+				$this->closeZoomHow->CSSPadding= '4px';
 				$this->closeZoomHow->Border= '1px solid #888';
-				
+				$this->closeZoomHow->CSSBorderRadius= "7px";
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
-			    $this->zoomHowPanel->CSSBorder= "7px solid #777";
-			    $this->zoomHowPanel->CSSBorderRadius= "7px";
-                $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
+			    
         }
 		
 		public function closeZ(){
