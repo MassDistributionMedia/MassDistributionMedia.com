@@ -14,7 +14,7 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", null, 33, null, null));
 		$this->mdmLogo->Layout= Layout::Center;
-		$this->Controls->Add($this->MovingPanel = new Panel(13, 77, 1673, 4535));
+		$this->Controls->Add($this->MovingPanel = new Panel(13, 111, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
 		  $this->zoomHow();
@@ -23,6 +23,7 @@ class Moving extends WebPage
 	   public function zoomHow()
         {
                 $this->Controls->Add($this->zoomHowPanel = new Panel(null, '33%', 555, 377));
+				$this->zoomHowPanel->Layout= Layout::Center;
 				$this->zoomHowPanel->CSSClass = "zoomHowPanel";
 				$this->zoomHowPanel->backColor = "#fff";
 				$this->zoomHowPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
@@ -32,9 +33,8 @@ class Moving extends WebPage
 				$this->zoomHowPlus->Layout= Layout::Center;
 				$this->zoomHowPlus->VAlign= Layout::Center;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
-				$this->zoomHowPanel->Width = "99px";
+				$this->zoomHowLabel->Width = "99px";
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
-				$this->zoomHowPanel->Layout= Layout::Center;
 				$this->closeZoomHow->Layout= Layout::Right;
 				
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
