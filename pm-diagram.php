@@ -51,7 +51,7 @@ class Moving extends WebPage
 				/* $grabImg = 'http://gif.mdm.cc/grab.gif';
 				$this->zoomHowLabel->Cursor= URL($grabImg); */
 				
-				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 269, null, null));
+				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
 				$this->closeZoomHow->BackColor= '#E1E0E0';
 				$this->closeZoomHow->Color= '#333333';
 				$this->closeZoomHow->CSSFontWeight= 'bold';
