@@ -24,7 +24,7 @@ class Moving extends WebPage
 	   public function zoomHow()
         {
                 $this->Controls->Add($this->zoomHowPanel = new Panel(222, 133, 555, 303));
-				$this->Controls->Add($this->zoomHowInner->zoomHowPanel = new Panel(222, 133, 555, 303));
+				$this->Controls->Add($zoomHowPanel->zoomHowInner = new Panel(222, 133, 555, 303));
 				$this->zoomHowInner->CSSClass = "zoomHowPanel";
 				$this->zoomHowInner->backColor = "#fff";
 				$this->zoomHowInner->CSSBorder= "7px solid #777";
