@@ -39,10 +39,10 @@ class Moving extends WebPage
 		$this->contactLink->Layout = Layout::Relative;
 		$this->servicesLink->Layout = Layout::Relative;
 		
-		$this->homeLink->Controls->CSSMarginRight = '31px';
-		$this->aboutLink->Controls->CSSMarginRight = '31px';
-		$this->contactLink->Controls->CSSMarginRight = '31px';
-		$this->servicesLink->Controls->CSSMarginRight = '31px';
+		$homeLink->Controls->CSSMarginRight = '31px';
+		$aboutLink->Controls->CSSMarginRight = '31px';
+		$contactLink->Controls->CSSMarginRight = '31px';
+		$servicesLink->Controls->CSSMarginRight = '31px';
 		
 		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
 		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
