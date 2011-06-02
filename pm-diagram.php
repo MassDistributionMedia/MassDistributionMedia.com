@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 require_once('NOLOH/NOLOH.php');
 
 class Moving extends WebPage 
@@ -42,16 +45,16 @@ class Moving extends WebPage
         }
 		
 		public function closeZ(){
-					$this->howPanel->Visible = false;
+					$this->howZoomPanel->Visible = false;
 				}
 				
 		public function nextArrows(){
 					$this->howZoomPanel->Visible = false;
-					$this->howArrows->Visible = true;
+					$this->howArrowsPanel->Visible = true;
 				}
 				
 		public function arrowZoom(){
-					$this->howArrows->Visible = false;
+					$this->howArrowsPanel->Visible = false;
 					$this->howZoomPanel->Visible = true;
 				}
 				
