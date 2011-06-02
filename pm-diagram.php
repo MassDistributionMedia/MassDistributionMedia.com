@@ -82,7 +82,7 @@ class Moving extends WebPage
 				$this->nextButton->CSSFontWeight= 'bold';
 				$this->nextButton->CSSPadding= '4px';
 				$this->nextButton->CSSBorderRadius= "2px";
-				$this->nextArrowButton->Click = new ServerEvent($this, 'nextArrows');
+				$this->nextButton->Click = new ServerEvent($this, 'nextArrows');
 
 					
 				}
