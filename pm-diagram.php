@@ -17,11 +17,17 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://massdistributionmedia.com/style.css');
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		
-		$this->Controls->Add($this->headerPanel = new Panel('40%', 78, '100%', null));
-		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
-		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 51, 0, 80, 24);
-		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 82, 0, 80, 24);
-		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 103, 0, 80, 24);
+		$this->Controls->Add($this->headerPanel = new Panel(null, 116, '100%', null));
+		$headerPanel->Layout = Layout::Relative;
+		$headerPanel->CSSMargin = System::Auto;
+		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', null, 0, 80, 24);
+		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', null, 0, 80, 24);
+		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', null, 0, 80, 24);
+		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', null, 0, 80, 24);
+		$this->homeLink->CSSDisplay = 'block';
+		$this->aboutLink->CSSDisplay = 'block';
+		$this->contactLink->CSSDisplay = 'block';
+		$this->servicesLink->CSSDisplay = 'block';
 
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
