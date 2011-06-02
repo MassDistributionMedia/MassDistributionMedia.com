@@ -24,35 +24,8 @@ class Moving extends WebPage
 	   public function zoomHow()
         {
                 $this->Controls->Add($this->zoomHowPanel = new Panel(222, 133, 555, 303));
-				$this->zoomHowPanel->Controls->Add($this->zoomHowInner = new Panel(null, null, null, null));
-				$this->zoomHowInner->Width= 555;
-				$this->zoomHowInner->Height= 303;
-				$this->zoomHowInner->CSSPadding= '7px';
-				$this->zoomHowInner->CSSClass = "zoomHowPanel";
-				$this->zoomHowInner->backColor = "#fff";
-				$this->zoomHowInner->CSSBorder= "7px solid #777";
-			    $this->zoomHowInner->CSSBorderRadius= "7px";
+				$this->howInnerPanel();
                 $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
-				
-				$this->zoomHowInner->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
-				
-                $this->zoomHowInner->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
-				$this->mouseImg->Layout= Layout::Right;
-				$this->zoomHowInner->Controls->Add($this->zoomHowPlus = new Label("+"));
-				$this->zoomHowPlus->CSSMargin= '133px 239px'; 
-				$this->zoomHowPlus->FontSize= 33;
-				$this->zoomHowPlus->Width= '100%';
-				$this->zoomHowPlus->Height= '100%';
-
-				$this->zoomHowInner->Controls->Add($this->zoomHowLabel = new Label("Press \"Control + Scroll\" to Zoom."));
-				$this->zoomHowLabel->CSSFontSize= 17;
-				$this->zoomHowLabel->Width= '100%';
-				$this->zoomHowLabel->Height= 14;
-				$this->zoomHowLabel->CSSFontWeight= 'bold';
-				$this->zoomHowLabel->CSSPadding= '11px 13px';
-				$this->zoomHowLabel->backColor= '#F1F1F1'; 
-				$this->zoomHowLabel->CSSDisplay= 'block'; 
-				$this->zoomHowLabel->Cursor= Cursor::Move;
 				
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
 				$this->closeZoomHow->BackColor= '#E1E0E0';
@@ -74,6 +47,38 @@ class Moving extends WebPage
 		
 		public function closeZ(){
 					$this->zoomHowPanel->Leave();
+				}
+				
+				public function howInnerPanel(){
+				$this->zoomHowPanel->Controls->Add($this->zoomHowInner = new Panel(null, null, null, null));
+				$this->zoomHowInner->Width= 555;
+				$this->zoomHowInner->Height= 303;
+				$this->zoomHowInner->CSSPadding= '7px';
+				$this->zoomHowInner->CSSClass = "zoomHowPanel";
+				$this->zoomHowInner->backColor = "#fff";
+				$this->zoomHowInner->CSSBorder= "7px solid #777";
+			    $this->zoomHowInner->CSSBorderRadius= "7px";
+				
+				$this->zoomHowInner->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
+				
+                $this->zoomHowInner->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
+				$this->mouseImg->Layout= Layout::Right;
+				$this->zoomHowInner->Controls->Add($this->zoomHowPlus = new Label("+"));
+				$this->zoomHowPlus->CSSMargin= '133px 239px'; 
+				$this->zoomHowPlus->FontSize= 33;
+				$this->zoomHowPlus->Width= '100%';
+				$this->zoomHowPlus->Height= '100%';
+
+				$this->zoomHowInner->Controls->Add($this->zoomHowLabel = new Label("Press \"Control + Scroll\" to Zoom."));
+				$this->zoomHowLabel->CSSFontSize= 17;
+				$this->zoomHowLabel->Width= '100%';
+				$this->zoomHowLabel->Height= 14;
+				$this->zoomHowLabel->CSSFontWeight= 'bold';
+				$this->zoomHowLabel->CSSPadding= '11px 13px';
+				$this->zoomHowLabel->backColor= '#F1F1F1'; 
+				$this->zoomHowLabel->CSSDisplay= 'block'; 
+				$this->zoomHowLabel->Cursor= Cursor::Move;
+					
 				}
 				
 
