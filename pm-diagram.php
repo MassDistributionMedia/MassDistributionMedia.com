@@ -44,7 +44,7 @@ class Moving extends WebPage
 				}
 				
 		public function nextArrows(){
-					$this->zoomHowPanel->Leave();
+					$this->howPanel->Leave();
 					$this->howArrows();
 				}
 				
