@@ -71,6 +71,7 @@ class Moving extends WebPage
 		
 		public function closeZ(){
 					$this->zoomHowPanel->Leave();
+					$this->zoomHowInner->Leave();
 				}
 				
 
