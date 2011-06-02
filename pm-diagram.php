@@ -32,6 +32,7 @@ class Moving extends WebPage
 				$this->howPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
 				$this->closeZoomHow->BackColor= '#E1E0E0';
 				$this->closeZoomHow->Color= '#333333';
+				$this->closeZoomHow->ZIndex= 7;				
 				$this->closeZoomHow->CSSFontWeight= 'bold';
 				$this->closeZoomHow->CSSPadding= '4px';
 				$this->closeZoomHow->CSSBorderRadius= "2px";
@@ -53,7 +54,6 @@ class Moving extends WebPage
 				$this->howZoomPanel->Width= 555;
 				$this->howZoomPanel->Height= 303;
 				$this->howZoomPanel->CSSPadding= '7px';
-				$this->howZoomPanel->CSSClass = "zoomHowPanel";
 				$this->howZoomPanel->backColor = "#fff";
 				
 				$this->howZoomPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
@@ -91,8 +91,8 @@ class Moving extends WebPage
 				$this->howPanel->Controls->Add($this->howArrowsPanel = new Panel(null, null, null, null));
 				$this->howArrowsPanel->Width= 555;
 				$this->howArrowsPanel->Height= 303;
+				$this->howArrowsPanel->BackColor= '#fff';
 				$this->howArrowsPanel->CSSPadding= '7px';
-				$this->howArrowsPanel->CSSClass = "zoomHowPanel";
 				$this->howArrowsPanel->Controls->Add($this->arrowImg = new Image("http://png.161.be/dec-arrow-keys.png", 137, 57, '50%', null));
 
 				$this->howArrowsPanel->Controls->Add($this->zoomArrowLabel = new Label("Use the arrow keys to navigate the diagram."));
