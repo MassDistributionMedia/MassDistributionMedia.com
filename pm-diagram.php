@@ -8,7 +8,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $logoLink;
 	
 	
 	function Moving()
@@ -19,10 +19,11 @@ class Moving extends WebPage
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
 		$this->mdmLogo->Layout= Layout::Center;
+		$this->mdmLogo->logoLink = new Link('http://massdistributionmedia.com');
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
-		$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
+	/*	$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
 		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
 		$this->headerPanel->Layout = Layout::Relative;
 		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
@@ -47,7 +48,7 @@ class Moving extends WebPage
 		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
 		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
 		$this->contactLink->CSSMarginLeft = $this->contactLink->CSSMarginRight = System::Auto;
-		$this->servicesLink->CSSMarginLeft = $this->servicesLink->CSSMarginRight = System::Auto;
+		$this->servicesLink->CSSMarginLeft = $this->servicesLink->CSSMarginRight = System::Auto; */
 		
 		$this->howTour();
 	}
