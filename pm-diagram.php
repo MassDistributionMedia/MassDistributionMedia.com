@@ -35,7 +35,7 @@ class Moving extends WebPage
                 $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
 				$this->mouseImg->Layout= Layout::Right;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
-				$this->zoomHowPlus->CSSMargin= '133px 232px'; 
+				$this->zoomHowPlus->CSSMargin= '141px 232px'; 
 				$this->zoomHowPlus->FontSize= 33;
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
