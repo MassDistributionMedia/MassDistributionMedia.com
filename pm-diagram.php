@@ -38,13 +38,11 @@ class Moving extends WebPage
 				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Press Control + Scroll to Zoom."));
 				$this->zoomHowLabel->CSSFontSize= 17;
 				$this->zoomHowLabel->Width= '100%';
-				$this->zoomHowLabel->Height= 26;
+				$this->zoomHowLabel->Height= 22;
 				$this->zoomHowLabel->CSSFontWeight= 'bold';
-				$this->zoomHowLabel->CSSPadding= '5px 13px'; 
 				$this->zoomHowLabel->backColor= '#F1F1F1'; 
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
-				
-				/* $this->zoomHowLabel->CSSMargin= '5px 13px'; */
+				$this->zoomHowLabel->CSSMargin= '5px 13px';
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
 				$this->closeZoomHow->Layout= Layout::Right;
 				
