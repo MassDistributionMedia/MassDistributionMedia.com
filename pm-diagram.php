@@ -28,7 +28,10 @@ class Moving extends WebPage
 		$this->aboutLink->CSSDisplay = 'block';
 		$this->contactLink->CSSDisplay = 'block';
 		$this->servicesLink->CSSDisplay = 'block';
-
+		
+		$this->homeLink->Layout =Layout::Center;
+		$this->aboutLink->CSSTextAlign = 'center';
+		$this->contactLink->CSSTextAlign = 'Center';
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
 		$this->mdmLogo->Layout= Layout::Center;
