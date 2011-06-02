@@ -31,7 +31,7 @@ class Moving extends WebPage
 
 			
 		foreach($sections as $section)
-			$nav->Controls->Add(new Link($navLinks, $section, 0, 5))
+			$nav->Controls->Add(new Link('navLinks', $section, 0, 5))
 				->Click = new ServerEvent($this, 'LoadSection', null, $section);
 				
 		$nav->Controls->AllCSSMarginRight = '31px';
