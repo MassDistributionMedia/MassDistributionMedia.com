@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $backArrowButton;
 	
 	
 	function Moving()
@@ -47,6 +47,11 @@ class Moving extends WebPage
 		public function nextArrows(){
 					$this->howZoomPanel->Leave();
 					$this->howArrows();
+				}
+				
+		public function arrowZoom(){
+					$this->howArrows->Leave();
+					$this->howZoomPanel();
 				}
 				
 				public function howZoom(){
@@ -111,6 +116,14 @@ class Moving extends WebPage
 				$this->nextArrowButton->CSSFontWeight= 'bold';
 				$this->nextArrowButton->CSSPadding= '4px';
 				$this->nextArrowButton->CSSBorderRadius= "2px";
+				
+				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Next", 449, 267, null, null));
+				$this->backArrowButton->BackColor= '#E1E0E0';
+				$this->backArrowButton->Color= '#333333';
+				$this->backArrowButton->CSSFontWeight= 'bold';
+				$this->backArrowButton->CSSPadding= '4px';
+				$this->backArrowButton->CSSBorderRadius= "2px";
+				$this->nextButton->Click = new ServerEvent($this, 'arrowZoom');
 					
 				}				
 
