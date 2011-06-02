@@ -19,7 +19,7 @@ class Moving extends WebPage
 		$this->Controls->Add($this->headerPanel = new Panel(null, 13, '100%', null));
 		/* $this->headerPanel->Layout = Layout::Center; */
 		$this->headerPanel->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 33, null, null));
-		$this->mdmLogo->Layout= Layout::Right;
+		$this->mdmLogo->Layout= Layout::Center;
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
