@@ -32,6 +32,7 @@ class Moving extends WebPage
 				$this->zoomHowPanel->Width = "99px";
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
 				$this->zoomHowPanel->Layout= Layout::Center;
+				$this->closeZoomHow->Layout= Layout::Right;
 				
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 			    $this->zoomHowPanel->CSSBorder= "1px solid #777";
