@@ -36,8 +36,8 @@ class Moving extends WebPage
 				$this->zoomHowPlus->Height= '100%';
 
 				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
-				$this->zoomHowPlus->FontSize= 17;
-				$this->zoomHowPlus->FontStyle= 'bold';
+				$this->zoomHowPlus->CSSFontSize= 17;
+				$this->zoomHowPlus->CSSFontWeight= 'bold';
 				$this->zoomHowPlus->CSSMargin= 13; 
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
 				$this->closeZoomHow->Layout= Layout::Right;
