@@ -20,10 +20,10 @@ class Moving extends WebPage
 		$this->Controls->Add($this->headerPanel = new Panel(null, 116, 1673, null));
 		$this->headerPanel->Layout = Layout::Relative;
 		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
-		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', null, 0, 80, 24);
-		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', null, 0, 80, 24);
-		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', null, 0, 80, 24);
-		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', null, 0, 80, 24);
+		$this->headerPanel->Controls = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', null, 0, 80, 24);
+		$this->headerPanel->Controls = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', null, 0, 80, 24);
+		$this->headerPanel->Controls = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', null, 0, 80, 24);
+		$this->headerPanel->Controls = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', null, 0, 80, 24);
 		$this->headerPanel->CSSTextAlign = 'center';
 		$this->homeLink->CSSDisplay = 'block';
 		$this->aboutLink->CSSDisplay = 'block';
