@@ -45,20 +45,20 @@ class Moving extends WebPage
 		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', null, null, null, null);
 		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', null, null, null, null);
 		
-	/*	$this->homeLink->Layout = Layout::Relative;
+		$this->homeLink->Layout = Layout::Relative;
 		$this->aboutLink->Layout = Layout::Relative;
 		$this->contactLink->Layout = Layout::Relative;
-		$this->servicesLink->Layout = Layout::Relative; */
+		$this->servicesLink->Layout = Layout::Relative; 
 		
-		$headerPanel->AllLayout = Layout::Relative;
+		/* $headerPanel->AllLayout = Layout::Relative;
 		$headerPanel->Controls->AllCSSMarginRight = '31px';
-		$headerPanel->CSSTextAlign = 'center';
+		$headerPanel->CSSTextAlign = 'center'; */
 
 		
-	/*	$homeLink->Controls->CSSMarginRight = '31px';
+	$homeLink->Controls->CSSMarginRight = '31px';
 		$aboutLink->Controls->CSSMarginRight = '31px';
 		$contactLink->Controls->CSSMarginRight = '31px';
-		$servicesLink->Controls->CSSMarginRight = '31px'; */
+		$servicesLink->Controls->CSSMarginRight = '31px'; 
 		
 		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
 		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
