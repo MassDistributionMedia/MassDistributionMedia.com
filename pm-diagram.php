@@ -8,7 +8,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink;
 	
 	
 	function Moving()
@@ -39,10 +39,10 @@ class Moving extends WebPage
 		$this->contactLink->Layout = Layout::Relative;
 		$this->servicesLink->Layout = Layout::Relative;
 		
-		$this->homeLink->CSSMarginRight = '31px';
-		$this->aboutLink->CSSMarginRight = '31px';
-		$this->contactLink->CSSMarginRight = '31px';
-		$this->servicesLink->CSSMarginRight = '31px';
+		$this->homeLink->Controls->CSSMarginRight = '31px';
+		$this->aboutLink->Controls->CSSMarginRight = '31px';
+		$this->contactLink->Controls->CSSMarginRight = '31px';
+		$this->servicesLink->Controls->CSSMarginRight = '31px';
 		
 		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
 		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
