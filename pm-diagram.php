@@ -17,14 +17,14 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://massdistributionmedia.com/style.css');
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		
-		$this->Controls->Add($this->headerPanel = new Panel('40%', 77, '100%', null));
+		$this->Controls->Add($this->headerPanel = new Panel('40%', 78, '100%', null));
 		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
-		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 33, 0, 80, 24);
-		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 33, 0, 80, 24);
-		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 33, 0, 80, 24);
+		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 31, 0, 80, 24);
+		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 62, 0, 80, 24);
+		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 93, 0, 80, 24);
 
 		
-		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 33, null, null));
+		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
 		$this->mdmLogo->Layout= Layout::Center;
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
