@@ -24,7 +24,7 @@ class Moving extends WebPage
 		
 		$nav = new Panel(0, 104, 1673, 30);
 		
-		 $navLinks = array(
+		 $navLinks[] = array(
 		 'http://massdistributionmedia.com' ,
 		 'http://massdistributionmedia.com/about.html' ,
 		 'http://massdistributionmedia.com/contact.html' ,
