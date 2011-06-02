@@ -18,7 +18,7 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		
 		$this->Controls->Add($this->headerPanel = new Panel(null, 77, '100%', null));
-		$this->headerPanel->Layout = Layout::Center;
+		$this->headerPanel->Layout= Layout::Center;
 		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 33, null, null));
