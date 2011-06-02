@@ -17,23 +17,17 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://massdistributionmedia.com/style.css');
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		
-		$this->Controls->Add($this->headerPanel = new Panel(13, 116, '100%', null));
-		/* $this->headerPanel->Layout = Layout::Relative;
-	    $this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto; */
-		$this->headerPanel->Controls = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
-		$this->headerPanel->Controls = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 0, 0, 80, 24);
-		$this->headerPanel->Controls = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 0, 0, 80, 24);
-		$this->headerPanel->Controls = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 0, 0, 80, 24);
-		/* $this->headerPanel->CSSTextAlign = 'center'; 
+		$this->Controls->Add($this->headerPanel = new Panel(null, 116, '100%', null));
+		$this->headerPanel->Layout = Layout::Relative;
+		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
+		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', null, 0, 80, 24);
+		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', null, 0, 80, 24);
+		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', null, 0, 80, 24);
+		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', null, 0, 80, 24);
 		$this->homeLink->CSSDisplay = 'block';
 		$this->aboutLink->CSSDisplay = 'block';
 		$this->contactLink->CSSDisplay = 'block';
-		$this->servicesLink->CSSDisplay = 'block'; 
-		
-		$this->homeLink->Layout = Layout::Relative;
-		$this->aboutLink->Layout = Layout::Relative;
-		$this->contactLink->Layout = Layout::Relative;
-		$this->servicesLink->Layout = Layout::Relative; */
+		$this->servicesLink->CSSDisplay = 'block';
 
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
