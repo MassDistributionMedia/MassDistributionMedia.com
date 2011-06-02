@@ -17,7 +17,7 @@ class Moving extends WebPage
 		$this->CSSFiles->Add('http://massdistributionmedia.com/style.css');
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
 		
-		$this->Controls->Add($this->headerPanel = new Panel(null, 116, 1673, null));
+		$this->Controls->Add($this->headerPanel = new Panel(null, 116, '100%', null));
 		$this->headerPanel->Layout = Layout::Relative;
 		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
 		$this->headerPanel->Controls = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', null, 0, 80, 24);
@@ -29,6 +29,11 @@ class Moving extends WebPage
 		$this->aboutLink->CSSDisplay = 'block';
 		$this->contactLink->CSSDisplay = 'block';
 		$this->servicesLink->CSSDisplay = 'block';
+		
+		$this->homeLink->Layout = Layout::Relative;
+		$this->aboutLink->Layout = Layout::Relative;
+		$this->contactLink->Layout = Layout::Relative;
+		$this->servicesLink->Layout = Layout::Relative;
 
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
