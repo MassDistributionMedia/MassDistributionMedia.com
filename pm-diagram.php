@@ -29,7 +29,7 @@ class Moving extends WebPage
 				$this->zoomHowInner->backColor = "#fff";
 				$this->zoomHowInner->CSSBorder= "7px solid #777";
 			    $this->zoomHowInner->CSSBorderRadius= "7px";
-                $this->zoomHowInner->Shifts[] = Shift::Location($this->zoomHowPanel);
+                $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
 				
 				$this->zoomHowInner->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
 				
@@ -51,7 +51,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
 				$this->zoomHowLabel->Cursor= Cursor::Move;
 				
-				$this->zoomHowInner->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
+				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
 				$this->closeZoomHow->BackColor= '#E1E0E0';
 				$this->closeZoomHow->Color= '#333333';
 				$this->closeZoomHow->CSSFontWeight= 'bold';
@@ -59,7 +59,7 @@ class Moving extends WebPage
 				$this->closeZoomHow->CSSBorderRadius= "2px";
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 				
-				$this->zoomHowInner->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
+				$this->zoomHowPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
 				$this->nextButton->BackColor= '#E1E0E0';
 				$this->nextButton->Color= '#333333';
 				$this->nextButton->CSSFontWeight= 'bold';
