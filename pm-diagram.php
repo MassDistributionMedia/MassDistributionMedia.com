@@ -31,10 +31,10 @@ class Moving extends WebPage
 		$this->contactLink->Layout = Layout::Relative;
 		$this->servicesLink->Layout = Layout::Relative;
 		
-		$this->homeLink->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
-		$this->aboutLink->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
-		$this->contactLink->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
-		$this->servicesLink->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
+		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
+		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
+		$this->contactLink->CSSMarginLeft = $this->contactLink->CSSMarginRight = System::Auto;
+		$this->servicesLink->CSSMarginLeft = $this->servicesLink->CSSMarginRight = System::Auto;
 		
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
 		$this->mdmLogo->Layout= Layout::Center;
