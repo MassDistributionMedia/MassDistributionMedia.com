@@ -30,7 +30,7 @@ class Moving extends WebPage
 				$this->mouseImg->Layout= Layout::Right;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
 				$this->zoomHowPlus->Align= Layout::Center;
-				$this->zoomHowPlus->CSSMargin= 111; 
+				$this->zoomHowPlus->CSSMarginTop= '111px'; 
 				$this->zoomHowPlus->FontSize= 33;
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
@@ -43,6 +43,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->CSSPadding= '11px 13px';
 				$this->zoomHowLabel->backColor= '#F1F1F1'; 
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
+				$this->zoomHowLabel->Cursor= url("http://gif.mdm.cc/grab.gif");
 				
 				/* $this->zoomHowLabel->CSSMargin= '5px 13px'; */
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
