@@ -127,7 +127,7 @@ class Moving extends WebPage
 				$this->backArrowButton->CSSFontWeight= 'bold';
 				$this->backArrowButton->CSSPadding= '4px';
 				$this->backArrowButton->CSSBorderRadius= "2px";
-				$this->nextButton->Click = new ServerEvent($this, 'arrowZoom');
+				$this->backArrowButton->Click = new ServerEvent($this, 'arrowZoom');
 					
 				}				
 
