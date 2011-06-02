@@ -55,7 +55,7 @@ class Moving extends WebPage
 				/* $this->closeZoomHow->BackColor= '#E1E0E0';
 				$this->closeZoomHow->Border= '1px solid #888'; */
 				$this->closeZoomHow->CSSPadding= '4px';
-				$this->closeZoomHow->CSSBorderRadius= "1px";
+				$this->closeZoomHow->CSSBorderRadius= "2px";
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 			    
         }
