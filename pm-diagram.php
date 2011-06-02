@@ -16,9 +16,11 @@ class Moving extends WebPage
 		parent::WebPage('Project Process Diagram - MDM');
 		$this->CSSFiles->Add('http://massdistributionmedia.com/style.css');
 		$this->CSSFiles->Add('http://pm.mdm.cc/pm-style.css');
+		
 		$this->Controls->Add($this->headerPanel = new Panel(null, 13, '100%', null));
-		/* $this->headerPanel->Layout = Layout::Center; */
-		$this->headerPanel->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 33, null, null));
+		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
+		
+		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 33, null, null));
 		$this->mdmLogo->Layout= Layout::Center;
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
@@ -28,8 +30,7 @@ class Moving extends WebPage
 	
 	   public function howTour()
         {
-				 $this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303); 
-                 /* $this->Controls->Add($this->howPanel = new Panel(222, 133, 555, 303)); */
+				$this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303); 
 				$this->howPanel->CSSBorder= "7px solid #777";
 				$this->howPanel->CSSBorderRadius= "7px";
 				$this->howZoom();
