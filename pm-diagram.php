@@ -24,7 +24,7 @@ class Moving extends WebPage
 		
 		
 		$this->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 78, 80, 24);
-		$this->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 51, 0, 80, 24);
+		$this->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 51, 78, 80, 24);
 		$this->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 82, 0, 80, 24);
 		$this->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 103, 0, 80, 24);
 		$this->homeLink->CSSDisplay = 'block';
