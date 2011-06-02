@@ -8,7 +8,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $backArrowButton;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton;
 	
 	
 	function Moving()
@@ -92,7 +92,6 @@ class Moving extends WebPage
 				$this->nextButton->CSSPadding= '4px';
 				$this->nextButton->CSSBorderRadius= "2px";
 				$this->nextButton->Click = new ServerEvent($this, 'nextArrows');
-
 					
 				}
 				
