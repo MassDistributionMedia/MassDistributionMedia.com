@@ -22,7 +22,7 @@ class Moving extends WebPage
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
-		$this->Controls->Add($this->headerPanel = new Panel(null, 78, null, 13));
+		$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
 		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
 		$this->headerPanel->Layout = Layout::Relative;
 		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
