@@ -35,7 +35,7 @@ class Moving extends WebPage
 				$this->closeZoomHow->Layout= Layout::Right;
 				
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
-			    $this->zoomHowPanel->CSSBorder= "1px solid #777";
+			    $this->zoomHowPanel->CSSBorder= "7px solid #777";
 			    $this->zoomHowPanel->CSSBorderRadius= "7px";
                 $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
         }
