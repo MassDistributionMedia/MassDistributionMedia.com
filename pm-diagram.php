@@ -22,7 +22,7 @@ class Moving extends WebPage
 		$this->Controls->Add($this->MovingPanel = new Panel(13, 177, 1673, 4535));
 		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
 		
-		$nav = new Panel(0, 104, '100%', 30);
+		$nav = new Panel(0, 104, 1673, 30);
 		
 		$sections = array('Home', 'About', 'Contact', 'Products');
 		
