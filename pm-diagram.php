@@ -32,7 +32,7 @@ class Moving extends WebPage
 				$this->howPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
 				$this->closeZoomHow->BackColor= '#E1E0E0';
 				$this->closeZoomHow->Color= '#333333';
-				$this->closeZoomHow->ZIndex= 7;				
+				$this->closeZoomHow->Buoyant= true;				
 				$this->closeZoomHow->CSSFontWeight= 'bold';
 				$this->closeZoomHow->CSSPadding= '4px';
 				$this->closeZoomHow->CSSBorderRadius= "2px";
