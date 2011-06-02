@@ -43,7 +43,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->CSSPadding= '11px 13px';
 				$this->zoomHowLabel->backColor= '#F1F1F1'; 
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
-				$this->zoomHowLabel->Cursor= url("http://gif.mdm.cc/grab.gif");
+				$this->zoomHowLabel->Cursor= URL("http://gif.mdm.cc/grab.gif");
 				
 				/* $this->zoomHowLabel->CSSMargin= '5px 13px'; */
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
