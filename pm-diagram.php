@@ -27,7 +27,7 @@ class Moving extends WebPage
 				$this->zoomHowPanel->CSSClass = "zoomHowPanel";
 				$this->zoomHowPanel->backColor = "#fff";
 				$this->zoomHowPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, null, null));
-                $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 33, '40%', null));
+                $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, '33%', '40%', null));
 				$this->mouseImg->Layout= Layout::Right;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
 				$this->zoomHowPanel->Width = "99px";
