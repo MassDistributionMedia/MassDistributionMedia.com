@@ -30,7 +30,7 @@ class Moving extends WebPage
 				$this->mouseImg->Layout= Layout::Right;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
 				$this->zoomHowPlus->Align= Layout::Center;
-				$this->zoomHowPlus->CSSMargin= auto; 
+				$this->zoomHowPlus->CSSMarginTop= 111; 
 				$this->zoomHowPlus->FontSize= 33;
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
