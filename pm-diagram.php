@@ -76,7 +76,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
 				$this->zoomHowLabel->Cursor= Cursor::Move;
 				
-				$this->zoomHowPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
+				$this->howZoomPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
 				$this->nextButton->BackColor= '#E1E0E0';
 				$this->nextButton->Color= '#333333';
 				$this->nextButton->CSSFontWeight= 'bold';
