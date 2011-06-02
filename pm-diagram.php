@@ -45,7 +45,7 @@ class Moving extends WebPage
         }
 		
 		public function closeZ(){
-					$this->howZoomPanel->Visible = false;
+					$this->howPanel->Visible = false;
 				}
 				
 		public function nextArrows(){
