@@ -52,8 +52,8 @@ class Moving extends WebPage
 				$this->zoomHowLabel->Cursor= URL($grabImg); */
 				
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", 505, 262, null, null));
-				/* $this->closeZoomHow->BackColor= '#E1E0E0';
-				$this->closeZoomHow->Border= '1px solid #888'; */
+				$this->closeZoomHow->BackColor= '#E1E0E0';
+				/* $this->closeZoomHow->Border= '1px solid #888'; */
 				$this->closeZoomHow->CSSPadding= '4px';
 				$this->closeZoomHow->CSSBorderRadius= "2px";
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
