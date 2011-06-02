@@ -25,6 +25,7 @@ class Moving extends WebPage
         {
                 $this->Controls->Add($this->howPanel = new Panel(222, 133, 555, 303));
 				$this->howPanel->CSSBorder= "7px solid #777";
+				$this->howPanel->CSSBorderRadius= "7px";
 				$this->howZoom();
                 $this->howPanel->Shifts[] = Shift::Location($this->howPanel);
 				
@@ -54,7 +55,6 @@ class Moving extends WebPage
 				$this->howZoomPanel->CSSPadding= '7px';
 				$this->howZoomPanel->CSSClass = "zoomHowPanel";
 				$this->howZoomPanel->backColor = "#fff";
-			    $this->howZoomPanel->CSSBorderRadius= "7px";
 				
 				$this->howZoomPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
 				
@@ -93,9 +93,7 @@ class Moving extends WebPage
 				$this->howArrowsPanel->Height= 303;
 				$this->howArrowsPanel->CSSPadding= '7px';
 				$this->howArrowsPanel->CSSClass = "zoomHowPanel";
-				$this->howArrowsPanel->backColor = "#fff";
-			    $this->howArrowsPanel->CSSBorderRadius= "7px";
-				
+				$this->howArrowsPanel->backColor = "#fff";				
 				$this->howArrowsPanel->Controls->Add($this->arrowImg = new Image("http://png.161.be/dec-arrow-keys.png", 10, 10, '50%', null));
 				
 				$this->arrowImg->CSSMargin= '133px 239px';
