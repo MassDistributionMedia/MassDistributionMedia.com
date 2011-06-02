@@ -30,8 +30,7 @@ class Moving extends WebPage
                 $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, 111, 145, null));
 				$this->mouseImg->Layout= Layout::Right;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
-				$this->zoomHowPlus->Align= Layout::Center;
-				$this->zoomHowPlus->CSSMarginTop= '111px'; 
+				$this->zoomHowPlus->CSSMargin= '222px 111px'; 
 				$this->zoomHowPlus->FontSize= 33;
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
@@ -45,9 +44,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->backColor= '#F1F1F1'; 
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
 				/* $grabImg = 'http://gif.mdm.cc/grab.gif';
-				$this->zoomHowLabel->Cursor= URL($grabImg);
-				
-				 $this->zoomHowLabel->CSSMargin= '5px 13px'; */
+				$this->zoomHowLabel->Cursor= URL($grabImg); */
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
 				$this->closeZoomHow->Layout= Layout::Right;
 				
