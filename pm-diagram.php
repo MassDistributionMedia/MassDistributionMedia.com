@@ -36,7 +36,7 @@ class Moving extends WebPage
 
 			
 		foreach($sections as $section)
-			$nav->Controls->Add(new Link($navLink, $section, 0, 5));
+			$nav->Controls->Add(new Link($navLinks, $section, 0, 5));
 				
 		$nav->Controls->AllCSSMarginRight = '31px';
 		$nav->Controls->AllLayout = Layout::Relative;
