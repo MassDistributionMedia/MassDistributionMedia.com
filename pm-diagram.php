@@ -35,7 +35,7 @@ class Moving extends WebPage
 				
 		$nav->Controls->AllCSSMarginRight = '31px';
 		$nav->Controls->AllLayout = Layout::Relative;
-		$nav->CSSMarginLeft = $nav->CSSMarginRight = System::Auto;
+		$sections->CSSMarginLeft = $sections->CSSMarginRight = System::Auto;
 		
 		
 	/*	$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
