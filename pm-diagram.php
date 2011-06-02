@@ -31,6 +31,7 @@ class Moving extends WebPage
 				$this->mouseImg->Layout= Layout::Right;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
 				$this->zoomHowPlus->Layout= Layout::Center;
+				$this->zoomHowPlus->VAlign= Layout::Center;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
 				$this->zoomHowPanel->Width = "99px";
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
