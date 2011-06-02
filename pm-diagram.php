@@ -23,7 +23,8 @@ class Moving extends WebPage
 	
 	   public function howTour()
         {
-                $this->Controls->Add($this->howPanel = new Panel(222, 133, 555, 303));
+				$this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303);
+               /* $this->Controls->Add($this->howPanel = new Panel(222, 133, 555, 303)); */
 				$this->howPanel->CSSBorder= "7px solid #777";
 				$this->howPanel->CSSBorderRadius= "7px";
 				$this->howZoom();
@@ -41,17 +42,17 @@ class Moving extends WebPage
         }
 		
 		public function closeZ(){
-					$this->howPanel->Leave();
+					$this->howPanel->Visible = false;
 				}
 				
 		public function nextArrows(){
-					$this->howZoomPanel->Leave();
-					$this->howArrows();
+					$this->howZoomPanel->Visible = false;
+					$this->howArrows->Visible = true;
 				}
 				
 		public function arrowZoom(){
-					$this->howArrows->Leave();
-					$this->howZoomPanel();
+					$this->howArrows->Visible = false;
+					$this->howZoomPanel->Visible = true;
 				}
 				
 				public function howZoom(){
@@ -117,7 +118,7 @@ class Moving extends WebPage
 				$this->nextArrowButton->CSSPadding= '4px';
 				$this->nextArrowButton->CSSBorderRadius= "2px";
 				
-				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Next", 449, 267, null, null));
+				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 449, 267, null, null));
 				$this->backArrowButton->BackColor= '#E1E0E0';
 				$this->backArrowButton->Color= '#333333';
 				$this->backArrowButton->CSSFontWeight= 'bold';
