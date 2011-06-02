@@ -22,7 +22,7 @@ class Moving extends WebPage
 	
 	   public function zoomHow()
         {
-                $this->Controls->Add($this->zoomHowPanel = new Panel(null, '33%', 555, 333));
+                $this->Controls->Add($this->zoomHowPanel = new Panel(null, '33%', 555, 303));
 				$this->zoomHowPanel->Layout= Layout::Center;
 				$this->zoomHowPanel->CSSClass = "zoomHowPanel";
 				$this->zoomHowPanel->backColor = "#fff";
@@ -30,15 +30,13 @@ class Moving extends WebPage
                 $this->zoomHowPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 13, '27%', 145, null));
 				$this->mouseImg->Layout= Layout::Right;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
-				$this->zoomHowPlus->Layout= Layout::Center;
-				$this->zoomHowPlus->VAlign= Layout::Center;
 				$this->zoomHowPanel->Controls->Add($this->zoomHowLabel = new Label("Yo it's a label dogg"));
-				$this->zoomHowLabel->Width = 99;
 				$this->zoomHowPanel->Controls->Add($this->closeZoomHow = new Button("Close", null, 3, null, null));
 				$this->closeZoomHow->Layout= Layout::Right;
 				
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 			    $this->zoomHowPanel->CSSBorder= "1px solid #777";
+			    $this->zoomHowPanel->CSSBorderRadius= "7px";
                 $this->zoomHowPanel->Shifts[] = Shift::Location($this->zoomHowPanel);
         }
 		
