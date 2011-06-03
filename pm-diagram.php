@@ -8,7 +8,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $nextArrowButton, $resetLabel;
 	
 	
 	function Moving()
@@ -148,7 +148,7 @@ class Moving extends WebPage
 				$this->nextArrowButton->CSSFontWeight= 'bold';
 				$this->nextArrowButton->CSSPadding= '4px';
 				$this->nextArrowButton->CSSBorderRadius= "2px";
-				$this->backArrowButton->Click = new ServerEvent($this, 'arrowZoom');
+				$this->backArrowButton->Click = new ServerEvent($this, 'arrowReset');
 				
 				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 431, 267, null, null));
 				$this->backArrowButton->BackColor= '#E1E0E0';
@@ -156,7 +156,7 @@ class Moving extends WebPage
 				$this->backArrowButton->CSSFontWeight= 'bold';
 				$this->backArrowButton->CSSPadding= '4px';
 				$this->backArrowButton->CSSBorderRadius= "2px";
-				$this->backArrowButton->Click = new ServerEvent($this, 'arrowReset');
+				$this->backArrowButton->Click = new ServerEvent($this, 'arrowZoom');
 					
 				}			
 				
@@ -168,26 +168,26 @@ class Moving extends WebPage
 				$this->howResetPanel->CSSPadding= '7px';
 				
 				
-				$this->howZoomPanel->Controls->Add($this->zeroKey = new Image("zero_key.png", 10, 10, null, null));
+				$this->howResetPanel->Controls->Add($this->zeroKey = new Image("zero_key.png", 10, 10, null, null));
 				$this->zeroKey->Layout= Layout::Right;
 				
-                $this->howZoomPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
+                $this->howResetPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
 				
-				$this->howZoomPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
+				$this->howResetPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
 				$this->zoomHowPlus->CSSMargin= '133px 239px'; 
 				$this->zoomHowPlus->FontSize= 33;
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
 
-				$this->howResetPanel->Controls->Add($this->zoomArrowLabel = new Label("Press Control + 0 to reset zoom."));
-				$this->howResetPanel->CSSFontSize= 17;
-				$this->howResetPanel->Width= '100%';
-				$this->howResetPanel->Height= 14;
-				$this->howResetPanel->CSSFontWeight= 'bold';
-				$this->howResetPanel->CSSPadding= '11px 13px';
-				$this->howResetPanel->BackColor= '#F1F1F1'; 
-				$this->howResetPanel->CSSDisplay= 'block'; 
-				$this->howResetPanel->Cursor= Cursor::Move;
+				$this->howResetPanel->Controls->Add($this->resetLabel = new Label("Press Control + 0 to reset zoom."));
+				$this->resetLabel->CSSFontSize= 17;
+				$this->resetLabel->Width= '100%';
+				$this->resetLabel->Height= 14;
+				$this->resetLabel->CSSFontWeight= 'bold';
+				$this->resetLabel->CSSPadding= '11px 13px';
+				$this->resetLabel->BackColor= '#F1F1F1'; 
+				$this->resetLabel->CSSDisplay= 'block'; 
+				$this->resetLabel->Cursor= Cursor::Move;
 				
 				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
 				$this->backResetButton->BackColor= '#E1E0E0';
