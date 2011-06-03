@@ -169,7 +169,6 @@ class Moving extends WebPage
 				
 				
 				$this->howResetPanel->Controls->Add($this->zeroKey = new Image("zero_key.png", 10, 10, null, null));
-				$this->zeroKey->Layout= Layout::Right;
 				
                 $this->howResetPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
 				
