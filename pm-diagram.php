@@ -27,7 +27,7 @@ class Moving extends WebPage
 		$sections = array(
 			'Home' => 'http://massdistributionmedia.com', 
 			'About' => 'http://massdistributionmedia.com/about.html', 
-			'Contact' => 'http://massdistributionmedia.com/contact.html', 
+			'Contact' => 'http://massdistributionmedia.com/contact.php', 
 			'Products' => 'http://massdistributionmedia.com/portfolio.html');
 		
 				$this->Controls->AddRange($nav);
