@@ -148,14 +148,15 @@ class Moving extends WebPage
 				$this->nextArrowButton->CSSFontWeight= 'bold';
 				$this->nextArrowButton->CSSPadding= '4px';
 				$this->nextArrowButton->CSSBorderRadius= "2px";
+				$this->backArrowButton->Click = new ServerEvent($this, 'arrowZoom');
 				
-				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 449, 241, null, null));
+				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 431, 267, null, null));
 				$this->backArrowButton->BackColor= '#E1E0E0';
 				$this->backArrowButton->Color= '#333333';
 				$this->backArrowButton->CSSFontWeight= 'bold';
 				$this->backArrowButton->CSSPadding= '4px';
 				$this->backArrowButton->CSSBorderRadius= "2px";
-				$this->backArrowButton->Click = new ServerEvent($this, 'arrowZoom');
+				$this->backArrowButton->Click = new ServerEvent($this, 'arrowReset');
 					
 				}			
 				
