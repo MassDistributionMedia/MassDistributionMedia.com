@@ -8,7 +8,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $nextArrowButton, $resetLabel;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $nextArrowButton, $resetLabel, $resetPlus, $ctrlImg2;
 	
 	
 	function Moving()
@@ -171,13 +171,13 @@ class Moving extends WebPage
 				$this->howResetPanel->Controls->Add($this->zeroKey = new Image("zero_key.png", 10, 10, null, null));
 				$this->zeroKey->Layout= Layout::Right;
 				
-                $this->howResetPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
+                $this->howResetPanel->Controls->Add($this->ctrlImg2 = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
 				
-				$this->howResetPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
-				$this->zoomHowPlus->CSSMargin= '133px 239px'; 
-				$this->zoomHowPlus->FontSize= 33;
-				$this->zoomHowPlus->Width= '100%';
-				$this->zoomHowPlus->Height= '100%';
+				$this->howResetPanel->Controls->Add($this->resetPlus = new Label("+"));
+				$this->resetPlus->CSSMargin= '133px 239px'; 
+				$this->resetPlus->FontSize= 33;
+				$this->resetPlus->Width= '100%';
+				$this->resetPlus->Height= '100%';
 
 				$this->howResetPanel->Controls->Add($this->resetLabel = new Label("Press Control + 0 to reset zoom."));
 				$this->resetLabel->CSSFontSize= 17;
