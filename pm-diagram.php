@@ -168,12 +168,11 @@ class Moving extends WebPage
 				$this->howResetPanel->CSSPadding= '7px';
 				
 				
-				$this->howResetPanel->Controls->Add($this->zeroKey = new Image("http://png.161.be/zero_key.png", null, null, null, null));
-				$this->zeroKey->CSSMargin= '113px 393px';
+				$this->howResetPanel->Controls->Add($this->zeroKey = new Image("http://png.161.be/zero_key.png", 77, 393, null, null));
 								
-                $this->howResetPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
+                $this->howResetPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 77, 111, 145, null));
 				$this->howResetPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
-				$this->zoomHowPlus->CSSMargin= '133px 247px'; 
+				$this->zoomHowPlus->CSSMargin= '133px 277px'; 
 				$this->zoomHowPlus->FontSize= 33;
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
