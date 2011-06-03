@@ -48,7 +48,7 @@ class Moving extends WebPage
         {
 				$this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303)
 				->CasCSSBorder"7px solid #777")
-				->CasCSSBorderRadius("7px")
+				->CasCSSBorderRadius("7px");
 				$this->howZoom();
                 $this->howPanel->Shifts[] = Shift::Location($this->howPanel);
 				
