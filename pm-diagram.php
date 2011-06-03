@@ -177,7 +177,7 @@ class Moving extends WebPage
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
 
-				$this->howResetPanel->Controls->Add($this->resetLabel = new Label("Press Control + 0 to reset zoom."));
+				$this->howResetPanel->Controls->Add($this->resetLabel = new Label("Press \"Control + 0\" to reset zoom."));
 				$this->resetLabel->CSSFontSize= 17;
 				$this->resetLabel->Width= '100%';
 				$this->resetLabel->Height= 14;
