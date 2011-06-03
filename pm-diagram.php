@@ -46,9 +46,9 @@ class Moving extends WebPage
 	
 	   public function howTour()
         {
-				$this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303); 
-				$this->howPanel->CSSBorder= "7px solid #777";
-				$this->howPanel->CSSBorderRadius= "7px";
+				$this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303)
+				->CasCSSBorder"7px solid #777")
+				->CasCSSBorderRadius("7px")
 				$this->howZoom();
                 $this->howPanel->Shifts[] = Shift::Location($this->howPanel);
 				
