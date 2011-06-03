@@ -8,7 +8,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey;
 	
 	
 	function Moving()
@@ -35,38 +35,11 @@ class Moving extends WebPage
 			
 		foreach($sections as $section => $link)
 			$nav->Controls->Add(new Link($link, $section, 0, 5))
-				->Click = new ServerEvent($this, 'LoadSection', null, $section);
+				->Click = new ServerEvent($this, null, null, $section);
 				
 		$nav->Controls->AllCSSMarginRight = '31px';
 		$nav->Controls->AllLayout = Layout::Relative;
 		$nav->CSSTextAlign = 'center';
-		
-	/*	$this->Controls->Add($this->headerPanel = new Panel(null, 78, '100%', 13));
-		$this->headerPanel->CSSMarginLeft = $this->headerPanel->CSSMarginRight = System::Auto;
-		$this->headerPanel->Layout = Layout::Relative;
-		$this->headerPanel->Controls['homeLink'] = $this->homeLink = new Link('http://massdistributionmedia.com', 'Home', 0, 0, 80, 24);
-		$this->headerPanel->Controls['aboutLink'] = $this->aboutLink = new Link('http://massdistributionmedia.com', 'About', 52, 0, 80, 24);
-		$this->headerPanel->Controls['contactLink'] = $this->contactLink = new Link('http://massdistributionmedia.com', 'Contact', 0, 82, 80, 24);
-		$this->headerPanel->Controls['servicesLink'] = $this->servicesLink = new Link('http://massdistributionmedia.com', 'Products', 0, 103, 80, 24);
-		$this->homeLink->CSSDisplay = 'block';
-		$this->aboutLink->CSSDisplay = 'block';
-		$this->contactLink->CSSDisplay = 'block';
-		$this->servicesLink->CSSDisplay = 'block';
-		
-		$this->homeLink->Layout = Layout::Relative;
-		$this->aboutLink->Layout = Layout::Relative;
-		$this->contactLink->Layout = Layout::Relative;
-		$this->servicesLink->Layout = Layout::Relative;
-		
-		$homeLink->Controls->CSSMarginRight = '31px';
-		$aboutLink->Controls->CSSMarginRight = '31px';
-		$contactLink->Controls->CSSMarginRight = '31px';
-		$servicesLink->Controls->CSSMarginRight = '31px';
-		
-		$this->homeLink->CSSMarginLeft = $this->homeLink->CSSMarginRight = System::Auto;
-		$this->aboutLink->CSSMarginLeft = $this->aboutLink->CSSMarginRight = System::Auto;
-		$this->contactLink->CSSMarginLeft = $this->contactLink->CSSMarginRight = System::Auto;
-		$this->servicesLink->CSSMarginLeft = $this->servicesLink->CSSMarginRight = System::Auto; */
 		
 		$this->howTour();
 	}
@@ -94,7 +67,7 @@ class Moving extends WebPage
 					$this->howPanel->Leave();
 				}
 				
-		public function nextArrows(){
+		public function zoomArrows(){
 					$this->howZoomPanel->Visible = false;
 					$this->howArrows();
 				}
@@ -102,6 +75,16 @@ class Moving extends WebPage
 		public function arrowZoom(){
 					$this->howArrowsPanel->Visible = false;
 					$this->howZoomPanel->Visible = true;
+				}
+				
+		public function arrowReset(){
+					$this->howArrowsPanel->Visible = false;
+					$this->howReset();
+				}
+				
+		public function resetArrow(){
+					$this->howArrowsPanel->Visible = true;
+					$this->howResetPanel->Visible = false;
 				}
 				
 				public function howZoom(){
@@ -137,7 +120,7 @@ class Moving extends WebPage
 				$this->nextButton->CSSFontWeight= 'bold';
 				$this->nextButton->CSSPadding= '4px';
 				$this->nextButton->CSSBorderRadius= "2px";
-				$this->nextButton->Click = new ServerEvent($this, 'nextArrows');
+				$this->nextButton->Click = new ServerEvent($this, 'zoomArrows');
 					
 				}
 				
@@ -166,7 +149,7 @@ class Moving extends WebPage
 				$this->nextArrowButton->CSSPadding= '4px';
 				$this->nextArrowButton->CSSBorderRadius= "2px";
 				
-				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 449, 267, null, null));
+				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 449, 241, null, null));
 				$this->backArrowButton->BackColor= '#E1E0E0';
 				$this->backArrowButton->Color= '#333333';
 				$this->backArrowButton->CSSFontWeight= 'bold';
@@ -174,7 +157,46 @@ class Moving extends WebPage
 				$this->backArrowButton->CSSBorderRadius= "2px";
 				$this->backArrowButton->Click = new ServerEvent($this, 'arrowZoom');
 					
-				}				
+				}			
+				
+				public function howReset(){
+				$this->howPanel->Controls->Add($this->howResetPanel = new Panel(null, null, null, null));
+				$this->howResetPanel->Width= 555;
+				$this->howResetPanel->Height= 303;
+				$this->howResetPanel->BackColor= '#fff';
+				$this->howResetPanel->CSSPadding= '7px';
+				
+				
+				$this->howZoomPanel->Controls->Add($this->zeroKey = new Image("zero_key.png", 10, 10, null, null));
+				$this->zeroKey->Layout= Layout::Right;
+				
+                $this->howZoomPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
+				
+				$this->howZoomPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
+				$this->zoomHowPlus->CSSMargin= '133px 239px'; 
+				$this->zoomHowPlus->FontSize= 33;
+				$this->zoomHowPlus->Width= '100%';
+				$this->zoomHowPlus->Height= '100%';
+
+				$this->howResetPanel->Controls->Add($this->zoomArrowLabel = new Label("Press Control + 0 to reset zoom."));
+				$this->howResetPanel->CSSFontSize= 17;
+				$this->howResetPanel->Width= '100%';
+				$this->howResetPanel->Height= 14;
+				$this->howResetPanel->CSSFontWeight= 'bold';
+				$this->howResetPanel->CSSPadding= '11px 13px';
+				$this->howResetPanel->BackColor= '#F1F1F1'; 
+				$this->howResetPanel->CSSDisplay= 'block'; 
+				$this->howResetPanel->Cursor= Cursor::Move;
+				
+				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
+				$this->backResetButton->BackColor= '#E1E0E0';
+				$this->backResetButton->Color= '#333333';
+				$this->backResetButton->CSSFontWeight= 'bold';
+				$this->backResetButton->CSSPadding= '4px';
+				$this->backResetButton->CSSBorderRadius= "2px";
+				$this->backResetButton->Click = new ServerEvent($this, 'resetArrow');
+					
+				}			
 
 }
 	
