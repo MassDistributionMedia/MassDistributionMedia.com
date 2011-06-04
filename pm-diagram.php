@@ -62,7 +62,7 @@ class Moving extends WebPage
 		
 		public function closeZ(){
 					Animate::Width($this->howPanel, 33, 77, 777);
-					Animate::Location($this->howPanel, 222, 133, 777);
+					Animate::Location($this->howPanel, 0, 0, 777);
 				}
 				
 		public function zoomArrows(){
