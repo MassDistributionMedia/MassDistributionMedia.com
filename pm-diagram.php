@@ -69,6 +69,7 @@ class Moving extends WebPage
 					$this->nextButton->Visible = false;
 					$this->mdmLabel->Visible = false;
 					$this->mouseImg->Visible = false;
+					$this->howPanel->BackColor= "transparent";
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
 					Animate::Size($this->zoomHowLabel, 17, 55, 777, 555, 303);
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
@@ -83,7 +84,7 @@ class Moving extends WebPage
 		public function openHelp(){
 				Animate::Size($this->howPanel, 555, 303, 777, 15, 55);
 					Animate::Location($this->howPanel, 222, 133, 777);
-					$this->closeZoomHow->Visible = true;
+					Animate::Opacity($this->closeZoomHow, 100, 777);
 					$this->ctrlImg->Visible = true;
 					$this->zoomHowPlus->Visible = true;
 					$this->nextButton->Visible = true;
