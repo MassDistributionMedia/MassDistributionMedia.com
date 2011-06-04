@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	public $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel;
+	public $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $zoomLabelText ='Press \"Control + Scroll\" to Zoom.';
 	
 	
 	function Moving()
@@ -73,7 +73,7 @@ class Moving extends WebPage
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
 					$this->howZoomPanel->CSSPosition = 'fixed';
 					Animate::Size($this->howZoomPanel, 33, 77, 777, 777, 303);
-					$this->zoomHowLabel="H E L P";
+					$this->zoomHowText="H E L P";
 				}
 				
 				
@@ -115,7 +115,7 @@ class Moving extends WebPage
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
 				
-				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label("Press \"Control + Scroll\" to Zoom."));
+				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label($zoomLabelText));
 				$this->zoomHowLabel->CSSFontSize= 17;
 				$this->zoomHowLabel->Width= '100%';
 				$this->zoomHowLabel->Height= 14;
