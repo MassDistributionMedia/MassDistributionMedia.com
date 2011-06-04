@@ -147,7 +147,7 @@ class Moving extends WebPage
 				$this->mdmLabel->CSSMargin= '13px';
 				$this->mdmLabel->Color= '#777'; 
 				$this->mdmLabel->Buoyant=true;
-				$this->mdmLabel->Opacity=7;
+				$this->mdmLabel->Opacity=100;
 				$this->mdmLabel->CSSFont='Impact, Arial';
 				
 				
