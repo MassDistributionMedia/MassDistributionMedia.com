@@ -61,7 +61,7 @@ class Moving extends WebPage
         }
 		
 		public function closeZ(){
-					Animate::Size($this->howPanel, 33, 77, 777, '100%', '100%');
+					Animate::Size($this->howPanel, 33, 77, 777, 777, 303);
 					Animate::Location($this->howPanel, 0, 0, 777);
 				}
 				
