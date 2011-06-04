@@ -63,7 +63,7 @@ class Moving extends WebPage
 		public function closeZ(){
 					Animate::Size($this->howPanel, 17, 55, 777, 777, 303);
 					Animate::Location($this->howPanel, 0, 77, 777);
-					$this->closeZoomHow->Visible = false;
+					$this->closeZoomHow->Opacity = 0;
 					$this->ctrlImg->Visible = false;
 					$this->zoomHowPlus->Visible = false;
 					$this->nextButton->Visible = false;
@@ -84,7 +84,7 @@ class Moving extends WebPage
 		public function openHelp(){
 				Animate::Size($this->howPanel, 555, 303, 777, 15, 55);
 					Animate::Location($this->howPanel, 222, 133, 777);
-					Animate::Opacity($this->closeZoomHow, 100, 777, 0);
+					Animate::Opacity($this->closeZoomHow, 100, 777);
 					$this->ctrlImg->Visible = true;
 					$this->zoomHowPlus->Visible = true;
 					$this->nextButton->Visible = true;
