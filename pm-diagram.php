@@ -65,7 +65,7 @@ class Moving extends WebPage
 					Animate::Location($this->howPanel, 0, 0, 777);
 					$this->closeZoomHow->Visible = false;
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
-					Animate::Size($this->zoomHowLabel, 33, 77, 777, 555, 14);
+					Animate::Size($this->zoomHowLabel, 33, 77, 777, 555, 303);
 				}
 				
 		public function zoomArrows(){
