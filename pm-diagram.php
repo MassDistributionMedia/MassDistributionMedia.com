@@ -73,7 +73,7 @@ class Moving extends WebPage
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
 					$this->howZoomPanel->CSSPosition = 'fixed';
 					Animate::Size($this->howZoomPanel, 33, 77, 777, 777, 303);
-					$this->zoomLabelText="H E L P";
+					$zoomLabelText="H E L P";
 				}
 				
 				
@@ -115,7 +115,7 @@ class Moving extends WebPage
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
 				
-				$zoomLabelText ='Press \"Control + Scroll\" to Zoom.';
+				$zoomLabelText ='Press "Control + Scroll" to Zoom.';
 				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label($zoomLabelText));
 				$this->zoomHowLabel->CSSFontSize= 17;
 				$this->zoomHowLabel->Width= '100%';
