@@ -17,7 +17,7 @@ class Moving extends WebPage
 		$this->Controls->Add($this->mdmLogo = new Image("http://mdm.cc/logo-layoutv1_mdm.png", '27%', 39, null, null));
 		$this->mdmLogo->Layout= Layout::Center;
 		$this->Controls->Add($this->pmPanel = new Panel(13, 177, 1673, 4535));
-		$this->MovingPanel->CSSClass = 'pm-diagram-bg';
+		$this->pmPanel->CSSClass = 'pm-diagram-bg';
 		
 		$nav = new Panel(0, 104, 1673, 30);
 		
