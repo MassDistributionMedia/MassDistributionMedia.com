@@ -90,7 +90,7 @@ class Moving extends WebPage
 					$this->mdmLabel->Visible = true;
 					$this->mouseImg->Visible = true;
 					Animate::Property($this->howPanel, 'style.borderWidth', 7, 777);
-					Animate::Size($this->zoomHowLabel, '100%', 14, 777, 17, 55);
+					Animate::Size($this->zoomHowLabel, 555, 14, 777, 17, 55);
 					$this->zoomHowLabel->Cursor= Cursor::Move;
 					$this->howZoomPanel->CSSPosition = 'absolute';
 					Animate::Size($this->howZoomPanel, 555, 303, 777, 17, 55);
