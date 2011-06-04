@@ -59,11 +59,10 @@ class Moving extends WebPage
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
 				
 				$this->howPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
-				$this->mdmLabel->SetLocation(525, 13);
+				$this->mdmLabel->SetLocation(517, 13);
 				$this->mdmLabel->CSSFontSize= 17;
 				$this->mdmLabel->Height= 14;
 				$this->mdmLabel->CSSFontWeight= 'bold';
-				$this->mdmLabel->CSSMargin= '13px';
 				$this->mdmLabel->Color= '#777'; 
 				$this->mdmLabel->Buoyant=true;
 				$this->mdmLabel->Opacity=100;
