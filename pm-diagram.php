@@ -76,7 +76,7 @@ class Moving extends WebPage
 					Animate::Size($this->howZoomPanel, 17, 55, 777, 777, 303);
 					$this->zoomHowLabel->Text= 'H <br> E <br> L <br> P';
 					$this->zoomHowLabel->CSSBorder ='2px solid #777';
-					$this->howPanel->Controls->Add($this->openHelp = new Button('H <br> E <br> L <br> P', 0, 0, 46, 81));
+					$this->howPanel->Controls->Add($this->openHelp = new Button('', 0, 0, 46, 81));
 					
 				}
 				
