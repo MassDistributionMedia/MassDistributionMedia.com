@@ -1,8 +1,5 @@
 <?php
 
-error_reporting(E_ALL & ~E_NOTICE);
-ini_set('display_errors', '1');
-
 require_once('NOLOH/NOLOH.php');
 
 class Moving extends WebPage 
@@ -46,7 +43,7 @@ class Moving extends WebPage
 	
 	   public function howTour()
         {
-				$this->Controls = $this->howPanel = new Panel(222, 133, 555, 303);
+				$this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303);
 				$this->howPanel->CSSBorder='7px solid #777';
 				$this->howPanel->CSSBorderRadius='7px';
 				$this->howZoom();
