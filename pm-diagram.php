@@ -140,7 +140,7 @@ class Moving extends WebPage
 				$this->zoomArrowLabel->Cursor= Cursor::Move;
 				
 				$this->howArrowsPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
-				$this->mdmLabel->Width= 555;
+				$this->mdmLabel->Width= 544;
 				$this->mdmLabel->CSSFontSize= 17;
 				$this->mdmLabel->Height= 14;
 				$this->mdmLabel->CSSFontWeight= 'bold';
@@ -148,7 +148,7 @@ class Moving extends WebPage
 				$this->mdmLabel->CSSMargin= '13px';
 				$this->mdmLabel->Color= '#777'; 
 				$this->mdmLabel->Buoyant=true;
-				$this->mdmLabel->Opacity=9;
+				$this->mdmLabel->Opacity=7;
 				$this->mdmLabel->CSSFont='Impact, Arial';
 				
 				
