@@ -96,7 +96,8 @@ class Moving extends WebPage
 					$this->howZoomPanel->CSSPosition = 'absolute';
 					Animate::Size($this->howZoomPanel, 555, 303, 777, 17, 55);
 					$this->zoomHowLabel->Text= 'Press "Control + Scroll" to Zoom.';
-					$this->zoomHowLabel->CSSBorder ='0px solid #777';		
+					$this->zoomHowLabel->CSSBorder ='0px solid #777';	
+					$this->zoomHowLabel->Click = null;	
 			
 		}
 				
@@ -192,7 +193,7 @@ class Moving extends WebPage
 				$this->mdmLabel->CSSFontWeight= 'bold';
 				$this->mdmLabel->Color= '#777';
 				$this->mdmLabel->Opacity=7;
-				$this->mdmLabel->CSSFont='Impact, Arial';
+				$this->mdmLabel->Font='Impact, Arial';
 				$this->mdmLabel->Cursor= Cursor::Move;
 				
 				$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
@@ -247,7 +248,7 @@ class Moving extends WebPage
 				$this->mdmLabel->CSSFontWeight= 'bold';
 				$this->mdmLabel->Color= '#777';
 				$this->mdmLabel->Opacity=7;
-				$this->mdmLabel->CSSFont='Impact, Arial';
+				$this->mdmLabel->Font='Impact, Arial';
 				$this->mdmLabel->Cursor= Cursor::Move;
 
 				
