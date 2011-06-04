@@ -68,7 +68,7 @@ class Moving extends WebPage
 					Animate::Size($this->zoomHowLabel, 33, 77, 777, 555, 303);
 				/*	$zoomLabelText= "H E L P"; */
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
-					$this->zoomHowLabel->Label("H E L P");
+					Animate::Property($this->zoomHowLabel, 'node.nodeValue', 'H E L P', 777);
 				}
 				
 		public function zoomArrows(){
