@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $zoomLabelText;
 	
 	
 	function Moving()
@@ -66,9 +66,8 @@ class Moving extends WebPage
 					$this->closeZoomHow->Visible = false;
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
 					Animate::Size($this->zoomHowLabel, 33, 77, 777, 555, 303);
-				/*	$zoomLabelText= "H E L P"; */
+				    $this->zoomLabelText= "H E L P";
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
-					Animate::Property($this->zoomHowLabel, 'this.nodeValue', 'H E L P', 777);
 				}
 				
 		public function zoomArrows(){
