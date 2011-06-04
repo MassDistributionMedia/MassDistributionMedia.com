@@ -57,16 +57,6 @@ class Moving extends WebPage
 				$this->closeZoomHow->CSSPadding= '4px';
 				$this->closeZoomHow->CSSBorderRadius= "2px";
 				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
-				
-				$this->howPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
-				$this->mdmLabel->SetLocation(513, 13);
-				$this->mdmLabel->CSSFontSize= 17;
-				$this->mdmLabel->Height= 14;
-				$this->mdmLabel->CSSFontWeight= 'bold';
-				$this->mdmLabel->Color= '#777'; 
-				$this->mdmLabel->Buoyant=true;
-				$this->mdmLabel->Opacity=7;
-				$this->mdmLabel->CSSFont='Impact, Arial';
 			    
         }
 		
@@ -120,6 +110,15 @@ class Moving extends WebPage
 				$this->zoomHowLabel->backColor= '#F1F1F1'; 
 				$this->zoomHowLabel->CSSDisplay= 'block'; 
 				$this->zoomHowLabel->Cursor= Cursor::Move;
+
+				$this->howZoomPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+				$this->mdmLabel->SetLocation(513, 13);
+				$this->mdmLabel->CSSFontSize= 17;
+				$this->mdmLabel->Height= 14;
+				$this->mdmLabel->CSSFontWeight= 'bold';
+				$this->mdmLabel->Color= '#777';
+				$this->mdmLabel->Opacity=7;
+				$this->mdmLabel->CSSFont='Impact, Arial';
 				
 				$this->howZoomPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
 				$this->nextButton->BackColor= '#E1E0E0';
@@ -148,6 +147,8 @@ class Moving extends WebPage
 				$this->zoomArrowLabel->BackColor= '#F1F1F1'; 
 				$this->zoomArrowLabel->CSSDisplay= 'block'; 
 				$this->zoomArrowLabel->Cursor= Cursor::Move;
+				
+				$this->howArrowsPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
 				
 				$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
 				$this->nextArrowButton->BackColor= '#E1E0E0';
@@ -193,6 +194,9 @@ class Moving extends WebPage
 				$this->resetLabel->BackColor= '#F1F1F1'; 
 				$this->resetLabel->CSSDisplay= 'block'; 
 				$this->resetLabel->Cursor= Cursor::Move;
+				
+				$this->howResetPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+
 				
 				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
 				$this->backResetButton->BackColor= '#E1E0E0';
