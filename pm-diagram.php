@@ -222,7 +222,7 @@ class Moving extends WebPage
 				$this->howResetPanel->CSSPadding= '7px';
 				
 				
-				$this->howResetPanel->Controls->Add($this->zeroKey = new Image("http://png.161.be/zero_key.png", 393, 111, null, null));
+				$this->howResetPanel->Controls->Add($this->zeroKey = new Image("http://png.161.be/zero_key.png", 393, 111, null, 80));
 								
                 $this->howResetPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 77, 111, 145, null));
 				$this->howResetPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
