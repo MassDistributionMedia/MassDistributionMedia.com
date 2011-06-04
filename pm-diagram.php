@@ -60,6 +60,15 @@ class Moving extends WebPage
 			    
         }
 		
+		static function helpString($string)
+{
+    $vertString = 'HELP';
+    $count = strlen($string);
+    for($i=0; $i<$count; ++$i)
+        $vertString .= $string[$i] . '<br>';
+    return $vertString;
+}
+		
 		public function closeZ(){
 					Animate::Size($this->howPanel, 33, 77, 777, 777, 303);
 					Animate::Location($this->howPanel, 0, 0, 777);
@@ -73,7 +82,8 @@ class Moving extends WebPage
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
 					$this->howZoomPanel->CSSPosition = 'fixed';
 					Animate::Size($this->howZoomPanel, 33, 77, 777, 777, 303);
-					$zoomLabelText="H E L P";
+					$this->zoomHowLabel->Text= $vertString;
+					
 				}
 				
 				
@@ -115,8 +125,7 @@ class Moving extends WebPage
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
 				
-				$zoomLabelText ='Press "Control + Scroll" to Zoom.';
-				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label($zoomLabelText));
+				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label('Press \"Control + Scroll\" to Zoom.'));
 				$this->zoomHowLabel->CSSFontSize= 17;
 				$this->zoomHowLabel->Width= '100%';
 				$this->zoomHowLabel->Height= 14;
