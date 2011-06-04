@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	public $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $openHelp;
+	public $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel;
 	
 	
 	function Moving()
@@ -76,9 +76,28 @@ class Moving extends WebPage
 					Animate::Size($this->howZoomPanel, 17, 55, 777, 777, 303);
 					$this->zoomHowLabel->Text= 'H <br> E <br> L <br> P';
 					$this->zoomHowLabel->CSSBorder ='2px solid #777';
-					$this->howPanel->Controls->Add($this->openHelp = new Button('', 0, 0, 111, 133));
-					
+                    $this->zoomHowLabel->Click = new ServerEvent($this, 'openHelp');
+									
 				}
+				
+		public function openHelp(){
+				Animate::Size($this->howPanel, 555, 303, 777, 15, 55);
+					Animate::Location($this->howPanel, 222, 133, 777);
+					$this->closeZoomHow->Visible = true;
+					$this->ctrlImg->Visible = true;
+					$this->zoomHowPlus->Visible = true;
+					$this->nextButton->Visible = true;
+					$this->mdmLabel->Visible = true;
+					$this->mouseImg->Visible = true;
+					Animate::Property($this->howPanel, 'style.borderWidth', 7, 777);
+					Animate::Size($this->zoomHowLabel, 555, 303, 777, 17, 55);
+					$this->zoomHowLabel->Cursor= Cursor::Move;
+					$this->howZoomPanel->CSSPosition = 'absolute';
+					Animate::Size($this->howZoomPanel, 555, 303, 777, 17, 55);
+					$this->zoomHowLabel->Text= 'Press "Control + Scroll" to Zoom.';
+					$this->zoomHowLabel->CSSBorder ='0px solid #777';		
+			
+		}
 				
 		public function zoomArrows(){
 					$this->howZoomPanel->Visible = false;
