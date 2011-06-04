@@ -66,7 +66,7 @@ class Moving extends WebPage
 					$this->closeZoomHow->Visible = false;
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
 					Animate::Size($this->zoomHowLabel, 33, 77, 777, 555, 303);
-					$this->howZoomPanel= "H E L P";
+					$zoomLabelText= "H E L P";
 				}
 				
 		public function zoomArrows(){
@@ -105,8 +105,9 @@ class Moving extends WebPage
 				$this->zoomHowPlus->FontSize= 33;
 				$this->zoomHowPlus->Width= '100%';
 				$this->zoomHowPlus->Height= '100%';
-
-				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label("Press \"Control + Scroll\" to Zoom."));
+				
+				$zoomLabelText = "Press \"Control + Scroll\" to Zoom.";
+				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label($zoomLabelText));
 				$this->zoomHowLabel->CSSFontSize= 17;
 				$this->zoomHowLabel->Width= '100%';
 				$this->zoomHowLabel->Height= 14;
