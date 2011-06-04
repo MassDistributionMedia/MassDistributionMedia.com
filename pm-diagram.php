@@ -70,7 +70,7 @@ class Moving extends WebPage
 }
 		
 		public function closeZ(){
-					Animate::Size($this->howPanel, 33, 77, 777, 777, 303);
+					Animate::Size($this->howPanel, 17, 77, 777, 777, 303);
 					Animate::Location($this->howPanel, 0, 0, 777);
 					$this->closeZoomHow->Visible = false;
 					$this->ctrlImg->Visible = false;
@@ -78,7 +78,7 @@ class Moving extends WebPage
 					$this->nextButton->Visible = false;
 					$this->mdmLabel->Visible = false;
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
-					Animate::Size($this->zoomHowLabel, 33, 77, 777, 555, 303);
+					Animate::Size($this->zoomHowLabel, 17, 77, 777, 555, 303);
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
 					$this->howZoomPanel->CSSPosition = 'fixed';
 					Animate::Size($this->howZoomPanel, 33, 77, 777, 777, 303);
