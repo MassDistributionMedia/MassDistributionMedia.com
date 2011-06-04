@@ -65,7 +65,7 @@ class Moving extends WebPage
 					Animate::Location($this->howPanel, 0, 0, 777);
 					$this->closeZoomHow->Visible = false;
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
-					$this->howPanel->BackColor-> '#E1E0E0';
+					$this->howPanel->BackColor= '#E1E0E0';
 				}
 				
 		public function zoomArrows(){
