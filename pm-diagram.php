@@ -67,6 +67,7 @@ class Moving extends WebPage
 					$this->ctrlImg->Visible = false;
 					$this->zoomHowPlus->Visible = false;
 					$this->nextButton->Visible = false;
+					$this->mdmLabel->Visible = false;
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
 					Animate::Size($this->zoomHowLabel, 33, 77, 777, 555, 303);
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
