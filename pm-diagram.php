@@ -66,7 +66,7 @@ class Moving extends WebPage
 					$this->closeZoomHow->Visible = false;
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
 					Animate::Size($this->zoomHowLabel, 33, 77, 777, 555, 303);
-					$zoomLabelText= "H E L P";
+					$this->howZoomPanel->Controls->Add($this->zoomHowLabel = Label("H E L P")); 
 				}
 				
 		public function zoomArrows(){
