@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel;
+	private $MovingPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel;
 	
 	
 	function Moving()
@@ -138,6 +138,17 @@ class Moving extends WebPage
 				$this->zoomArrowLabel->BackColor= '#F1F1F1'; 
 				$this->zoomArrowLabel->CSSDisplay= 'block'; 
 				$this->zoomArrowLabel->Cursor= Cursor::Move;
+				
+				$this->howArrowsPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+				$this->mdmLabel->CSSFontSize= 17;
+				$this->mdmLabel->Height= 14;
+				$this->mdmLabel->CSSFontWeight= 'bold';
+				$this->mdmLabel->SetLocation(111, 13);
+				$this->mdmLabel->Color= '#777'; 
+				$this->mdmLabel->Buoyant=true;
+				$this->mdmLabel->Opacity=33;
+				$this->mdmLabel->CSSFont='Impact, Arial';
+				
 				
 				$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
 				$this->nextArrowButton->BackColor= '#E1E0E0';
