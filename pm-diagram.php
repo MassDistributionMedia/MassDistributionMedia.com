@@ -143,10 +143,10 @@ class Moving extends WebPage
 				$this->mdmLabel->CSSFontSize= 17;
 				$this->mdmLabel->Height= 14;
 				$this->mdmLabel->CSSFontWeight= 'bold';
-				$this->mdmLabel->SetLocation(111, 13);
+				$this->mdmLabel->SetLocation(449, 13);
 				$this->mdmLabel->Color= '#777'; 
 				$this->mdmLabel->Buoyant=true;
-				$this->mdmLabel->Opacity=33;
+				$this->mdmLabel->Opacity=13;
 				$this->mdmLabel->CSSFont='Impact, Arial';
 				
 				
