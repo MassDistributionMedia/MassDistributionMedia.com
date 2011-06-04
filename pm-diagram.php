@@ -47,7 +47,7 @@ class Moving extends WebPage
 				$this->howPanel->CSSBorder='7px solid #777';
 				$this->howPanel->CSSBorderRadius='7px';
 				$this->howZoom();
-                $this->howPanel->Shifts[] = Shift::Location($this->howPanel);
+                $this->howPanel->Shifts[] = Shift::Location($this->howPanel, null);
 				
 				$this->howPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
 				$this->closeZoomHow->BackColor= '#E1E0E0';
