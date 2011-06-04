@@ -119,6 +119,7 @@ class Moving extends WebPage
 				$this->mdmLabel->Color= '#777';
 				$this->mdmLabel->Opacity=7;
 				$this->mdmLabel->CSSFont='Impact, Arial';
+				$this->mdmLabel->Cursor= Cursor::Move;
 				
 				$this->howZoomPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
 				$this->nextButton->BackColor= '#E1E0E0';
@@ -149,6 +150,14 @@ class Moving extends WebPage
 				$this->zoomArrowLabel->Cursor= Cursor::Move;
 				
 				$this->howArrowsPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+				$this->mdmLabel->SetLocation(513, 13);
+				$this->mdmLabel->CSSFontSize= 17;
+				$this->mdmLabel->Height= 14;
+				$this->mdmLabel->CSSFontWeight= 'bold';
+				$this->mdmLabel->Color= '#777';
+				$this->mdmLabel->Opacity=7;
+				$this->mdmLabel->CSSFont='Impact, Arial';
+				$this->mdmLabel->Cursor= Cursor::Move;
 				
 				$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
 				$this->nextArrowButton->BackColor= '#E1E0E0';
@@ -196,6 +205,14 @@ class Moving extends WebPage
 				$this->resetLabel->Cursor= Cursor::Move;
 				
 				$this->howResetPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+				$this->mdmLabel->SetLocation(513, 13);
+				$this->mdmLabel->CSSFontSize= 17;
+				$this->mdmLabel->Height= 14;
+				$this->mdmLabel->CSSFontWeight= 'bold';
+				$this->mdmLabel->Color= '#777';
+				$this->mdmLabel->Opacity=7;
+				$this->mdmLabel->CSSFont='Impact, Arial';
+				$this->mdmLabel->Cursor= Cursor::Move;
 
 				
 				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
