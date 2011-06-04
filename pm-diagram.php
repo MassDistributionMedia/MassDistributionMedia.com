@@ -60,7 +60,7 @@ class Moving extends WebPage
 			    
         }
 		
-		static function helpString($string)
+		public static function helpString($string)
 {
     $vertString = 'HELP';
     $count = strlen($string);
