@@ -166,7 +166,10 @@ class Moving extends WebPage
 				$this->zoomArrowButton->CSSPadding= '4px';
 				$this->zoomArrowButton->CSSBorderRadius= "2px";
 				$this->zoomArrowButton->Click = new ServerEvent($this, 'zoomArrows');
-					
+				
+				if($howPanel->Left = null){
+				System::Alert('Press "Control + Scroll" to Zoom.');
+					}
 				}
 				
 				public function howArrows(){
