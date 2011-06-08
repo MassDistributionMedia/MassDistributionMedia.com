@@ -1,5 +1,7 @@
 <?php
 
+require_once('/NOLOH/NOLOH.php');
+
 class CustomWindow extends WindowPanel
 {
 	function CustomWindow($title = 'Custom Window', $left = 0, $top = 0, $width = 200, $height = 300)
@@ -22,4 +24,19 @@ class CustomWindow extends WindowPanel
 		$this->TitleBar->Controls['Title']->FontSize = 13;
 	}
 }
+
+class spawnWin extends WebPage
+
+{
+
+	function spawnWin()
+
+	{
+
+		$this->CustomWindow();
+
+	}
+
+}
+
 ?>
