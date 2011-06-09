@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	public $pmPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeHow, $mdmLogo, $zoomHowPlus, $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $closeHowButton, $zoomArrowButton, $backButton, $nextButton, $mdmLabelHolder, $howLabelHolder;
+	public $pmPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeHow, $mdmLogo, $zoomHowPlus, $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $closeHowButton, $zoomArrowButton, $backButton, $nextButton;
 	
 	
 	function Moving()
@@ -69,7 +69,8 @@ class Moving extends WebPage
 					$this->nextButton->Visible = false;
 					$this->mdmLabelHolder->Visible = false;
 					$this->mouseImg->Visible = false;
-					$this->howPanel->BackColor= "transparent";
+					/* $this->howPanel->BackColor= "transparent"; */
+					Animate::Property($this->howPanel, 'style.background', 'transparent', 777);
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
 					Animate::Size($this->zoomHowLabel, 17, 55, 777, 555, 303);
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
@@ -158,15 +159,14 @@ class Moving extends WebPage
 				->CasOpacity(7)
 				->CasFont('Impact, Arial')
 				->CasCursor(Cursor::Move);
-				$this->mdmLabel = $this->mdmLabelHolder;
 				
-				$this->howZoomPanel->Controls->Add($this->zoomArrowButton = new Button("Next", 449, 267, null, null));
-				$this->zoomArrowButton->BackColor= '#E1E0E0';
-				$this->zoomArrowButton->Color= '#333333';
-				$this->zoomArrowButton->CSSFontWeight= 'bold';
-				$this->zoomArrowButton->CSSPadding= '4px';
-				$this->zoomArrowButton->CSSBorderRadius= "2px";
-				$this->zoomArrowButton->Click = new ServerEvent($this, 'zoomArrows');
+				$this->howZoomPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
+				$this->nextButton->BackColor= '#E1E0E0';
+				$this->nextButton->Color= '#333333';
+				$this->nextButton->CSSFontWeight= 'bold';
+				$this->nextButton->CSSPadding= '4px';
+				$this->nextButton->CSSBorderRadius= "2px";
+				$this->nextButton->Click = new ServerEvent($this, 'zoomArrows');
 				
 			/*	if($howPanel->Left = -555){
 				System::Alert('Press "Control + Scroll" to Zoom.');
@@ -202,13 +202,15 @@ class Moving extends WebPage
 				$this->mdmLabel->Font='Impact, Arial';
 				$this->mdmLabel->Cursor= Cursor::Move;
 				
-				$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
+				$this->nextButton;
+				
+			/*	$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
 				$this->nextArrowButton->BackColor= '#E1E0E0';
 				$this->nextArrowButton->Color= '#333333';
 				$this->nextArrowButton->CSSFontWeight= 'bold';
 				$this->nextArrowButton->CSSPadding= '4px';
 				$this->nextArrowButton->CSSBorderRadius= "2px";
-				$this->nextArrowButton->Click = new ServerEvent($this, 'arrowReset');
+				$this->nextArrowButton->Click = new ServerEvent($this, 'arrowReset'); */
 				
 				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 397, 267, null, null));
 				$this->backArrowButton->BackColor= '#E1E0E0';
