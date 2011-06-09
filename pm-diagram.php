@@ -125,20 +125,20 @@ class Moving extends WebPage
 				
 				public function howZoom(){
 				$this->howPanel->Controls->Add($this->howZoomPanel = new Panel(null, null, null, null));
-				$this->howZoomPanel->Width= 555;
-				$this->howZoomPanel->Height= 303;
-				$this->howZoomPanel->CSSPadding= '7px';
-				$this->howZoomPanel->backColor = "#fff";
+				$this->howZoomPanel->CasWidth(555)
+				->CasHeight(303)
+				->CasCSSPadding('7px')
+				->CasBackColor("#fff");
 				
 				$this->howZoomPanel->Controls->Add($this->mouseImg = new Image("http://gif.161.be/hand_mouse_wheel_scroll.gif", 10, 10, '50%', null));
 				
                 $this->howZoomPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 39, 111, 145, null));
 				$this->mouseImg->Layout= Layout::Right;
 				$this->howZoomPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
-				$this->zoomHowPlus->CSSMargin= '133px 239px'; 
-				$this->zoomHowPlus->FontSize= 33;
-				$this->zoomHowPlus->Width= '100%';
-				$this->zoomHowPlus->Height= '100%';
+				$this->zoomHowPlus->CasCSSMargin('133px 239px') 
+				->CasFontSize(33)
+				->CasWidth('100%')
+				->CasHeight('100%');
 				
 				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label('Press "Control + Scroll" to Zoom.'));
 				$this->zoomHowLabel->CasCSSFontSize(17)
@@ -161,11 +161,11 @@ class Moving extends WebPage
 				->CasCursor(Cursor::Move);
 				
 				$this->howZoomPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
-				$this->nextButton->BackColor= '#E1E0E0';
-				$this->nextButton->Color= '#333333';
-				$this->nextButton->CSSFontWeight= 'bold';
-				$this->nextButton->CSSPadding= '4px';
-				$this->nextButton->CSSBorderRadius= "2px";
+				$this->nextButton->CasBackColor('#E1E0E0')
+				->CasColor('#333333')
+				->CasCSSFontWeight('bold')
+				->CasCSSPadding('4px')
+				->CSSBorderRadius("2px");
 				$this->nextButton->Click = new ServerEvent($this, 'zoomArrows');
 				
 			/*	if($howPanel->Left = -555){
@@ -202,16 +202,13 @@ class Moving extends WebPage
 				$this->mdmLabel->Font='Impact, Arial';
 				$this->mdmLabel->Cursor= Cursor::Move;
 				
-				$this->nextButton->Visible=true;
-				$this->nextButton->Click = new ServerEvent($this, 'arrowReset'); 
-
-				
-			/*	$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
+				$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
 				$this->nextArrowButton->BackColor= '#E1E0E0';
 				$this->nextArrowButton->Color= '#333333';
 				$this->nextArrowButton->CSSFontWeight= 'bold';
 				$this->nextArrowButton->CSSPadding= '4px';
-				$this->nextArrowButton->CSSBorderRadius= "2px"; */
+				$this->nextArrowButton->CSSBorderRadius= "2px";
+				$this->nextArrowButton->Click = new ServerEvent($this, 'arrowReset');
 				
 				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 397, 267, null, null));
 				$this->backArrowButton->BackColor= '#E1E0E0';
