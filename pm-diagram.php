@@ -202,15 +202,16 @@ class Moving extends WebPage
 				$this->mdmLabel->Font='Impact, Arial';
 				$this->mdmLabel->Cursor= Cursor::Move;
 				
-				$this->nextButton;
+				$this->nextButton->Visible=true;
+				$this->nextButton->Click = new ServerEvent($this, 'arrowReset'); 
+
 				
 			/*	$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
 				$this->nextArrowButton->BackColor= '#E1E0E0';
 				$this->nextArrowButton->Color= '#333333';
 				$this->nextArrowButton->CSSFontWeight= 'bold';
 				$this->nextArrowButton->CSSPadding= '4px';
-				$this->nextArrowButton->CSSBorderRadius= "2px";
-				$this->nextArrowButton->Click = new ServerEvent($this, 'arrowReset'); */
+				$this->nextArrowButton->CSSBorderRadius= "2px"; */
 				
 				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 397, 267, null, null));
 				$this->backArrowButton->BackColor= '#E1E0E0';
