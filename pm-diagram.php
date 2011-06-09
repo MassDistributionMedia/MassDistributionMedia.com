@@ -141,14 +141,14 @@ class Moving extends WebPage
 				$this->zoomHowPlus->Height= '100%';
 				
 				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label('Press "Control + Scroll" to Zoom.'));
-				$this->zoomHowLabel->CSSFontSize= 17;
-				$this->zoomHowLabel->Width= '100%';
-				$this->zoomHowLabel->Height= 14;
-				$this->zoomHowLabel->CSSFontWeight= 'bold';
-				$this->zoomHowLabel->CSSPadding= '11px 13px';
-				$this->zoomHowLabel->backColor= '#F1F1F1'; 
-				$this->zoomHowLabel->CSSDisplay= 'block'; 
-				$this->zoomHowLabel->Cursor= Cursor::Move;
+				$this->zoomHowLabel->CasCSSFontSize(17)
+				->CasWidth('100%')
+				->CasHeight(14)
+				->CasCSSFontWeight('bold')
+				->CasCSSPadding('11px 13px')
+				->CasbackColor('#F1F1F1') 
+				->CasCSSDisplay('block') 
+				->CasCursor(Cursor::Move);
 
 				$this->howZoomPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
 				$this->mdmLabel->CasSetLocation(513, 13)
