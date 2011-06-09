@@ -165,7 +165,7 @@ class Moving extends WebPage
 				->CasColor('#333333')
 				->CasCSSFontWeight('bold')
 				->CasCSSPadding('4px')
-				->CSSBorderRadius("2px");
+				->CasCSSBorderRadius("2px");
 				$this->nextButton->Click = new ServerEvent($this, 'zoomArrows');
 				
 			/*	if($howPanel->Left = -555){
