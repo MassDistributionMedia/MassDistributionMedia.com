@@ -150,7 +150,7 @@ class Moving extends WebPage
 				$this->zoomHowLabel->Cursor= Cursor::Move;
 
 				$this->howZoomPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
-				$this->mdmLabel->CasSetLocation = $this->mdmLabelHolder->CasSetLocation(513, 13)
+				$this->mdmLabel->CasSetLocation(513, 13)
 				->CasCSSFontSize(17)
 				->CasHeight(14)
 				->CasCSSFontWeight('bold')
@@ -158,6 +158,7 @@ class Moving extends WebPage
 				->CasOpacity(7)
 				->CasFont('Impact, Arial')
 				->CasCursor(Cursor::Move);
+				$this->mdmLabel = $this->mdmLabelHolder;
 				
 				$this->howZoomPanel->Controls->Add($this->zoomArrowButton = new Button("Next", 449, 267, null, null));
 				$this->zoomArrowButton->BackColor= '#E1E0E0';
