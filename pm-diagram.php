@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	public $pmPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeZoomHow, $mdmLogo, $zoomHowPlus, $nextButton,  $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $closeHowButton, $zoomArrowButton, $backButton, $mdmLabelHolder, $currentHowLabel;
+	public $pmPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeHow, $mdmLogo, $zoomHowPlus, $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $closeHowButton, $zoomArrowButton, $backButton, $nextButton, $mdmLabelHolder, $howLabelHolder;
 	
 	
 	function Moving()
@@ -49,25 +49,25 @@ class Moving extends WebPage
 				$this->howZoom();
                 $this->howPanel->Shifts[] = Shift::Location($this->howPanel, null, null);
 								
-				$this->howPanel->Controls->Add($this->closeZoomHow = new Button("Close", 499, 267, null, null));
-				$this->closeZoomHow->BackColor= '#E1E0E0';
-				$this->closeZoomHow->Color= '#333333';
-				$this->closeZoomHow->Buoyant= true;				
-				$this->closeZoomHow->CSSFontWeight= 'bold';
-				$this->closeZoomHow->CSSPadding= '4px';
-				$this->closeZoomHow->CSSBorderRadius= "2px";
-				$this->closeZoomHow->Click = new ServerEvent($this, 'closeZ');
+				$this->howPanel->Controls->Add($this->closeHow = new Button("Close", 499, 267, null, null));
+				$this->closeHow->BackColor= '#E1E0E0';
+				$this->closeHow->Color= '#333333';
+				$this->closeHow->Buoyant= true;				
+				$this->closeHow->CSSFontWeight= 'bold';
+				$this->closeHow->CSSPadding= '4px';
+				$this->closeHow->CSSBorderRadius= "2px";
+				$this->closeHow->Click = new ServerEvent($this, 'closeZ');
 			    
         }
 		
 		public function closeZ(){
 					Animate::Size($this->howPanel, 17, 55, 777, 777, 303);
 					Animate::Location($this->howPanel, 0, 77, 777);
-					$this->closeZoomHow->Opacity = 0;
+					$this->closeHow->Opacity = 0;
 					$this->ctrlImg->Visible = false;
 					$this->zoomHowPlus->Visible = false;
 					$this->nextButton->Visible = false;
-					$this->mdmLabel->Visible = false;
+					$this->mdmLabelHolder->Visible = false;
 					$this->mouseImg->Visible = false;
 					$this->howPanel->BackColor= "transparent";
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
@@ -85,7 +85,7 @@ class Moving extends WebPage
 		public function openHelp(){
 				Animate::Size($this->howPanel, 555, 303, 777, 15, 55);
 					Animate::Location($this->howPanel, 222, 133, 777);
-					Animate::Opacity($this->closeZoomHow, 100, 1333);
+					Animate::Opacity($this->closeHow, 100, 1333);
 					$this->ctrlImg->Visible = true;
 					$this->zoomHowPlus->Visible = true;
 					$this->nextButton->Visible = true;
@@ -150,14 +150,14 @@ class Moving extends WebPage
 				$this->zoomHowLabel->Cursor= Cursor::Move;
 
 				$this->howZoomPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
-				$this->mdmLabel->SetLocation(513, 13);
-				$this->mdmLabel->CSSFontSize= 17;
-				$this->mdmLabel->Height= 14;
-				$this->mdmLabel->CSSFontWeight= 'bold';
-				$this->mdmLabel->Color= '#777';
-				$this->mdmLabel->Opacity=7;
-				$this->mdmLabel->Font='Impact, Arial';
-				$this->mdmLabel->Cursor= Cursor::Move;
+				$this->mdmLabel->CasSetLocation = $this->mdmLabelHolder->CasSetLocation(513, 13)
+				->CasCSSFontSize(17)
+				->CasHeight(14)
+				->CasCSSFontWeight('bold')
+				->CasColor('#777')
+				->CasOpacity(7)
+				->CasFont('Impact, Arial')
+				->CasCursor(Cursor::Move);
 				
 				$this->howZoomPanel->Controls->Add($this->zoomArrowButton = new Button("Next", 449, 267, null, null));
 				$this->zoomArrowButton->BackColor= '#E1E0E0';
@@ -167,10 +167,11 @@ class Moving extends WebPage
 				$this->zoomArrowButton->CSSBorderRadius= "2px";
 				$this->zoomArrowButton->Click = new ServerEvent($this, 'zoomArrows');
 				
-				if($howPanel->Left = -555){
+			/*	if($howPanel->Left = -555){
 				System::Alert('Press "Control + Scroll" to Zoom.');
 					}
-				}
+				*/
+				} 
 				
 				public function howArrows(){
 				$this->howPanel->Controls->Add($this->howArrowsPanel = new Panel(null, null, null, null));
