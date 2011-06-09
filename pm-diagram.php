@@ -67,7 +67,7 @@ class Moving extends WebPage
 					$this->ctrlImg->Visible = false;
 					$this->zoomHowPlus->Visible = false;
 					$this->nextButton->Visible = false;
-					$this->mdmLabelHolder->Visible = false;
+					$this->mdmLabel->Visible = false;
 					$this->mouseImg->Visible = false;
 					/* $this->howPanel->BackColor= "transparent"; */
 					Animate::Property($this->howPanel, 'style.background', 'transparent', 777);
@@ -202,13 +202,15 @@ class Moving extends WebPage
 				$this->mdmLabel->Font='Impact, Arial';
 				$this->mdmLabel->Cursor= Cursor::Move;
 				
-				$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
+			/*	$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
 				$this->nextArrowButton->BackColor= '#E1E0E0';
 				$this->nextArrowButton->Color= '#333333';
 				$this->nextArrowButton->CSSFontWeight= 'bold';
 				$this->nextArrowButton->CSSPadding= '4px';
-				$this->nextArrowButton->CSSBorderRadius= "2px";
-				$this->nextArrowButton->Click = new ServerEvent($this, 'arrowReset');
+				$this->nextArrowButton->CSSBorderRadius= "2px"; */
+				
+				$this->nextButton->Visible(true)->Buoyant(true);
+				$this->nextButton->Click = new ServerEvent($this, 'arrowReset'); 
 				
 				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 397, 267, null, null));
 				$this->backArrowButton->BackColor= '#E1E0E0';
