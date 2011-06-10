@@ -71,7 +71,7 @@ class Moving extends WebPage
 					$this->mdmLabel->Visible = false;
 					$this->mouseImg->Visible = false;
 					/* $this->howPanel->BackColor= "transparent"; */
-					Animate::Property($this->howPanel, 'style.background', 'transparent', 777);
+					Animate::Opacity($this->howPanel, 0, 777);
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
 					Animate::Size($this->zoomHowLabel, 17, 55, 777, 555, 303);
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
