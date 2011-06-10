@@ -204,49 +204,49 @@ class Moving extends WebPage
 				->CasCursor(Cursor::Move);
 				
 				$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
-				$this->nextArrowButton->BackColor= '#E1E0E0';
-				$this->nextArrowButton->Color= '#333333';
-				$this->nextArrowButton->CSSFontWeight= 'bold';
-				$this->nextArrowButton->CSSPadding= '4px';
-				$this->nextArrowButton->CSSBorderRadius= "2px";
-				$this->nextArrowButton->Click = new ServerEvent($this, 'arrowReset'); 
+				$this->nextArrowButton->CasBackColor('#E1E0E0')
+				->CasColor('#333333')
+				->CasCSSFontWeight('bold')
+				->CasCSSPadding('4px')
+				->CasCSSBorderRadius("2px");
+				$this->nextArrowButton->CasClick = new ServerEvent($this, 'arrowReset'); 
 				
 				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 397, 267, null, null));
-				$this->backArrowButton->BackColor= '#E1E0E0';
-				$this->backArrowButton->Color= '#333333';
-				$this->backArrowButton->CSSFontWeight= 'bold';
-				$this->backArrowButton->CSSPadding= '4px';
-				$this->backArrowButton->CSSBorderRadius= "2px";
+				$this->backArrowButton->CasBackColor('#E1E0E0')
+				->CasColor('#333333')
+				->CasCSSFontWeight('bold')
+				->CasCSSPadding('4px')
+				->CasCSSBorderRadius("2px");
 				$this->backArrowButton->Click = new ServerEvent($this, 'arrowZoom');
 					
 				}			
 				
 				public function howReset(){
 				$this->howPanel->Controls->Add($this->howResetPanel = new Panel(null, null, null, null));
-				$this->howResetPanel->Width= 555;
-				$this->howResetPanel->Height= 303;
-				$this->howResetPanel->BackColor= '#fff';
-				$this->howResetPanel->CSSPadding= '7px';
+				$this->howResetPanel->CasWidth(555)
+				->CasHeight(303)
+				->CasBackColor('#fff')
+				->CasCSSPadding('7px');
 				
 				
 				$this->howResetPanel->Controls->Add($this->zeroKey = new Image("http://png.161.be/zero_key.png", 393, 113, null, 81));
 								
                 $this->howResetPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 77, 111, 145, null));
 				$this->howResetPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
-				$this->zoomHowPlus->CSSMargin= '133px 277px'; 
-				$this->zoomHowPlus->FontSize= 33;
-				$this->zoomHowPlus->Width= '100%';
-				$this->zoomHowPlus->Height= '100%';
+				$this->zoomHowPlus->CasCSSMargin('133px 277px') 
+				->CasFontSize(33)
+				->CasWidth('100%')
+				->CasHeight('100%');
 
 				$this->howResetPanel->Controls->Add($this->resetLabel = new Label("Press \"Control + 0\" to reset zoom."));
-				$this->resetLabel->CSSFontSize= 17;
-				$this->resetLabel->Width= '100%';
-				$this->resetLabel->Height= 14;
-				$this->resetLabel->CSSFontWeight= 'bold';
-				$this->resetLabel->CSSPadding= '11px 13px';
-				$this->resetLabel->BackColor= '#F1F1F1'; 
-				$this->resetLabel->CSSDisplay= 'block'; 
-				$this->resetLabel->Cursor= Cursor::Move;
+				$this->resetLabel->CasCSSFontSize(17)
+				->CasWidth('100%')
+				->CasHeight(14)
+				->CasCSSFontWeight('bold')
+				->CasCSSPadding('11px 13px')
+				->CasBackColor('#F1F1F1') 
+				->CasCSSDisplay('block') 
+				->CasCursor(Cursor::Move);
 				
 				$this->howResetPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
 				$this->mdmLabel->CasSetLocation(513, 13)
@@ -259,11 +259,11 @@ class Moving extends WebPage
 				->CasCursor(Cursor::Move);
 				
 				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
-				$this->backResetButton->BackColor= '#E1E0E0';
-				$this->backResetButton->Color= '#333333';
-				$this->backResetButton->CSSFontWeight= 'bold';
-				$this->backResetButton->CSSPadding= '4px';
-				$this->backResetButton->CSSBorderRadius= "2px";
+				$this->backResetButton->CasBackColor('#E1E0E0')
+				->CasColor('#333333')
+			    ->CasCSSFontWeight('bold')
+				->CasCSSPadding('4px')
+				->CasCSSBorderRadius("2px");
 				$this->backResetButton->Click = new ServerEvent($this, 'resetArrow');
 					
 				}			
