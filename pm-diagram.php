@@ -77,9 +77,7 @@ class Moving extends WebPage
 					Animate::Size($this->howZoomPanel, 17, 55, 777, 777, 303);
 					$this->zoomHowLabel->Text= 'H <br> E <br> L <br> P';
 					$this->zoomHowLabel->CSSBorder ='2px solid #777';
-                    $this->zoomHowLabel->Click = new ServerEvent($this, 'openHelp');
-					/* $this->variableOne->CSSMargin =  $this->variableTwo->CSSMargin =  '133px 277px'; */
-									
+                    $this->zoomHowLabel->Click = new ServerEvent($this, 'openHelp');									
 				}
 				
 		public function openHelp(){
@@ -255,7 +253,8 @@ class Moving extends WebPage
 				->CasColor('#777')
 				->CasOpacity(7)
 				->CasFont('Impact, Arial')
-				->CasCursor(Cursor::Move);
+				->CasCursor(Cursor::Move)
+				->Visible(true);
 				
 				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
 				$this->backResetButton->BackColor= '#E1E0E0';
