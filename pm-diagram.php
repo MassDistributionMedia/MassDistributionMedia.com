@@ -254,7 +254,7 @@ class Moving extends WebPage
 				->CasOpacity(7)
 				->CasFont('Impact, Arial')
 				->CasCursor(Cursor::Move)
-				->Visible(true);
+				->Buoyant(true);
 				
 				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
 				$this->backResetButton->BackColor= '#E1E0E0';
