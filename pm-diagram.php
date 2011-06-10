@@ -64,17 +64,26 @@ class Moving extends WebPage
 		public function closeZ(){
 					Animate::Size($this->howPanel, 17, 55, 777, 777, 303);
 					Animate::Location($this->howPanel, 0, 77, 777);
-					$this->closeHow->Opacity = 0;
-					$this->ctrlImg->Visible = false;
-					$this->zoomHowPlus->Visible = false;
-					$this->nextButton->Visible = false;
-					$this->mdmLabel->Visible = false;
-					$this->mouseImg->Visible = false;
 					Animate::Property($this->howPanel, 'style.borderWidth', 0, 777);
-					Animate::Size($this->zoomHowLabel, 17, 55, 777, 555, 303);
-					$this->zoomHowLabel->Cursor= Cursor::Hand;
+					
+				/*	$this->closeHow->Opacity = 0; */
+					Animate::Opacity($this->closeHow, 0, 777);
+				/*	$this->ctrlImg->Visible = false; */
+					Animate::Opacity($this->ctrlImg, 0, 777);
+				/*	$this->zoomHowPlus->Visible = false; */
+					Animate::Opacity($this->zoomHowPlus, 0, 777); 
+				/*	$this->nextButton->Visible = false; */
+					Animate::Opacity($this->nextButton, 0, 777);
+				/*	$this->mdmLabel->Visible = false; */
+					Animate::Opacity($this->mdmLabel, 0, 777);
+				/*	$this->mouseImg->Visible = false; */
+					Animate::Opacity($this->mouseImg, 0, 777);
+					
 					$this->howZoomPanel->CSSPosition = 'fixed';
 					Animate::Size($this->howZoomPanel, 17, 55, 777, 777, 303);
+					
+					Animate::Size($this->zoomHowLabel, 17, 55, 777, 555, 303);
+					$this->zoomHowLabel->Cursor= Cursor::Hand;
 					$this->zoomHowLabel->Text= 'H <br> E <br> L <br> P';
 					$this->zoomHowLabel->CSSBorder ='2px solid #777';
                     $this->zoomHowLabel->Click = new ServerEvent($this, 'openHelp');									
