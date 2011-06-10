@@ -190,7 +190,7 @@ class Moving extends WebPage
 				->CasCSSDisplay('block') 
 				->CasCursor(Cursor::Move);
 				
-				$this->howZoomPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+				$this->howArrowsPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
 				$this->mdmLabel->CasSetLocation(513, 13)
 				->CasCSSFontSize(17)
 				->CasHeight(14)
@@ -245,7 +245,7 @@ class Moving extends WebPage
 				$this->resetLabel->CSSDisplay= 'block'; 
 				$this->resetLabel->Cursor= Cursor::Move;
 				
-				$this->howZoomPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+				$this->howResetPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
 				$this->mdmLabel->CasSetLocation(513, 13)
 				->CasCSSFontSize(17)
 				->CasHeight(14)
@@ -253,8 +253,7 @@ class Moving extends WebPage
 				->CasColor('#777')
 				->CasOpacity(7)
 				->CasFont('Impact, Arial')
-				->CasCursor(Cursor::Move)
-				->Buoyant(true);
+				->CasCursor(Cursor::Move);
 				
 				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
 				$this->backResetButton->BackColor= '#E1E0E0';
