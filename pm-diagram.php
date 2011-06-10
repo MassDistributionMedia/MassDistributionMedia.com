@@ -209,7 +209,7 @@ class Moving extends WebPage
 				->CasCSSFontWeight('bold')
 				->CasCSSPadding('4px')
 				->CasCSSBorderRadius("2px");
-				$this->nextArrowButton->CasClick = new ServerEvent($this, 'arrowReset'); 
+				$this->nextArrowButton->Click = new ServerEvent($this, 'arrowReset'); 
 				
 				$this->howArrowsPanel->Controls->Add($this->backArrowButton = new Button("Back", 397, 267, null, null));
 				$this->backArrowButton->CasBackColor('#E1E0E0')
