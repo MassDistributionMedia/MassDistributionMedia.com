@@ -44,18 +44,19 @@ class Moving extends WebPage
 	   public function howTour()
         {
 				$this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303);
-				$this->howPanel->CSSBorder='7px solid #777';
-				$this->howPanel->CSSBorderRadius='7px';
+				$this->howPanel->CSSBorder('7px solid #777')
+				->CasCSSBorderRadius('7px');
+				
 				$this->howZoom();
                 $this->howPanel->Shifts[] = Shift::Location($this->howPanel, null, null);
 								
 				$this->howPanel->Controls->Add($this->closeHow = new Button("Close", 499, 267, null, null));
-				$this->closeHow->BackColor= '#E1E0E0';
-				$this->closeHow->Color= '#333333';
-				$this->closeHow->Buoyant= true;				
-				$this->closeHow->CSSFontWeight= 'bold';
-				$this->closeHow->CSSPadding= '4px';
-				$this->closeHow->CSSBorderRadius= "2px";
+				$this->closeHow->CasBackColor('#E1E0E0')
+				->CasColor('#333333')
+				->CasBuoyant(true)			
+				->CasCSSFontWeight('bold')
+				->CasCSSPadding('4px')
+				->CasCSSBorderRadius("2px");
 				$this->closeHow->Click = new ServerEvent($this, 'closeZ');
 			    
         }
@@ -176,31 +177,32 @@ class Moving extends WebPage
 				
 				public function howArrows(){
 				$this->howPanel->Controls->Add($this->howArrowsPanel = new Panel(null, null, null, null));
-				$this->howArrowsPanel->Width= 555;
-				$this->howArrowsPanel->Height= 303;
-				$this->howArrowsPanel->BackColor= '#fff';
-				$this->howArrowsPanel->CSSPadding= '7px';
+				$this->howArrowsPanel->CasWidth(555)
+				->CasHeight(303)
+				->CasBackColor('#fff')
+				->CasCSSPadding('7px');
+				
 				$this->howArrowsPanel->Controls->Add($this->arrowImg = new Image("http://png.161.be/dec-arrow-keys.png", 137, 57, '50%', null));
 
 				$this->howArrowsPanel->Controls->Add($this->zoomArrowLabel = new Label("Use the arrow keys to navigate the diagram."));
-				$this->zoomArrowLabel->CSSFontSize= 17;
-				$this->zoomArrowLabel->Width= '100%';
-				$this->zoomArrowLabel->Height= 14;
-				$this->zoomArrowLabel->CSSFontWeight= 'bold';
-				$this->zoomArrowLabel->CSSPadding= '11px 13px';
-				$this->zoomArrowLabel->BackColor= '#F1F1F1'; 
-				$this->zoomArrowLabel->CSSDisplay= 'block'; 
-				$this->zoomArrowLabel->Cursor= Cursor::Move;
+				$this->zoomArrowLabel->CasCSSFontSize(17)
+				->CasWidth('100%')
+				->CasHeight(14)
+				->CasCSSFontWeight('bold')
+				->CasCSSPadding('11px 13px')
+				->CasBackColor('#F1F1F1') 
+				->CasCSSDisplay('block') 
+				->CasCursor(Cursor::Move);
 				
-				$this->howArrowsPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
-				$this->mdmLabel->SetLocation(513, 13);
-				$this->mdmLabel->CSSFontSize= 17;
-				$this->mdmLabel->Height= 14;
-				$this->mdmLabel->CSSFontWeight= 'bold';
-				$this->mdmLabel->Color= '#777';
-				$this->mdmLabel->Opacity=7;
-				$this->mdmLabel->Font='Impact, Arial';
-				$this->mdmLabel->Cursor= Cursor::Move;
+				$this->howZoomPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+				$this->mdmLabel->CasSetLocation(513, 13)
+				->CasCSSFontSize(17)
+				->CasHeight(14)
+				->CasCSSFontWeight('bold')
+				->CasColor('#777')
+				->CasOpacity(7)
+				->CasFont('Impact, Arial')
+				->CasCursor(Cursor::Move);
 				
 			/*	$this->howArrowsPanel->Controls->Add($this->nextArrowButton = new Button("Next", 449, 267, null, null));
 				$this->nextArrowButton->BackColor= '#E1E0E0';
@@ -249,16 +251,15 @@ class Moving extends WebPage
 				$this->resetLabel->CSSDisplay= 'block'; 
 				$this->resetLabel->Cursor= Cursor::Move;
 				
-				$this->howResetPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
-				$this->mdmLabel->SetLocation(513, 13);
-				$this->mdmLabel->CSSFontSize= 17;
-				$this->mdmLabel->Height= 14;
-				$this->mdmLabel->CSSFontWeight= 'bold';
-				$this->mdmLabel->Color= '#777';
-				$this->mdmLabel->Opacity=7;
-				$this->mdmLabel->Font='Impact, Arial';
-				$this->mdmLabel->Cursor= Cursor::Move;
-
+				$this->howZoomPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+				$this->mdmLabel->CasSetLocation(513, 13)
+				->CasCSSFontSize(17)
+				->CasHeight(14)
+				->CasCSSFontWeight('bold')
+				->CasColor('#777')
+				->CasOpacity(7)
+				->CasFont('Impact, Arial')
+				->CasCursor(Cursor::Move);
 				
 				$this->howResetPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
 				$this->backResetButton->BackColor= '#E1E0E0';
