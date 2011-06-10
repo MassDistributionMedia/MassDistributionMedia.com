@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	public $pmPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $zoomHowLabel, $closeHow, $mdmLogo, $zoomHowPlus, $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $closeHowButton, $zoomArrowButton, $backButton, $nextButton;
+	public $pmPanel, $zoomHowPanel, $ctrlImg, $mouseImg, $howLabel, $closeHow, $mdmLogo, $zoomHowPlus, $howArrowsPanel, $howPanel, $nextArrowButton, $howZoomPanel, $arrowImg, $zoomArrowLabel, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $howResetPanel, $backResetButton, $zeroKey, $resetLabel, $mdmLabel, $closeHowButton, $zoomArrowButton, $backButton, $nextButton;
 	
 	
 	function Moving()
@@ -140,8 +140,8 @@ class Moving extends WebPage
 				->CasWidth('100%')
 				->CasHeight('100%');
 				
-				$this->howZoomPanel->Controls->Add($this->zoomHowLabel = new Label('Press "Control + Scroll" to Zoom.'));
-				$this->zoomHowLabel->CasCSSFontSize(17)
+				$this->howZoomPanel->Controls->Add($this->howLabel = new Label('Press "Control + Scroll" to Zoom.'));
+				$this->howLabel->CasCSSFontSize(17)
 				->CasWidth('100%')
 				->CasHeight(14)
 				->CasCSSFontWeight('bold')
@@ -183,8 +183,8 @@ class Moving extends WebPage
 				
 				$this->howArrowsPanel->Controls->Add($this->arrowImg = new Image("http://png.161.be/dec-arrow-keys.png", 137, 57, '50%', null));
 
-				$this->howArrowsPanel->Controls->Add($this->zoomArrowLabel = new Label("Use the arrow keys to navigate the diagram."));
-				$this->zoomArrowLabel->CasCSSFontSize(17)
+				$this->howArrowsPanel->Controls->Add($this->howLabel = new Label("Use the arrow keys to navigate the diagram."));
+				$this->howLabel->CasCSSFontSize(17)
 				->CasWidth('100%')
 				->CasHeight(14)
 				->CasCSSFontWeight('bold')
