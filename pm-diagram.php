@@ -77,10 +77,10 @@ class Moving extends WebPage
 					Animate::Size($this->howZoomPanel, 17, 55, 777, 777, 303);
 					
 					Animate::Size($this->howLabel, 17, 55, 777, 555, 303);
-					$this->zoomHowLabel->Cursor= Cursor::Hand;
-					$this->zoomHowLabel->Text= 'H <br> E <br> L <br> P';
-					$this->zoomHowLabel->CSSBorder ='2px solid #777';
-                    $this->zoomHowLabel->Click = new ServerEvent($this, 'openHelp');									
+					$this->howLabel->CasCursor(Cursor::Hand)
+					->CasText('H <br> E <br> L <br> P')
+					->CasCSSBorder('2px solid #777');
+                    $this->howLabel->Click = new ServerEvent($this, 'openHelp');									
 				}
 				
 		public function openHelp(){
@@ -93,13 +93,13 @@ class Moving extends WebPage
 					$this->mdmLabel->Visible = true;
 					$this->mouseImg->Visible = true;
 					Animate::Property($this->howPanel, 'style.borderWidth', 7, 777);
-					Animate::Size($this->zoomHowLabel, 555, 14, 777, 17, 55);
-					$this->zoomHowLabel->Cursor= Cursor::Move;
+					Animate::Size($this->howLabel, 555, 14, 777, 17, 55);
+					$this->howLabel->Cursor= Cursor::Move;
 					$this->howZoomPanel->CSSPosition = 'absolute';
 					Animate::Size($this->howZoomPanel, 555, 303, 777, 17, 55);
-					$this->zoomHowLabel->Text= 'Press "Control + Scroll" to Zoom.';
-					$this->zoomHowLabel->CSSBorder ='0px solid #777';	
-					$this->zoomHowLabel->Click = null;
+					$this->howLabel->Text= 'Press "Control + Scroll" to Zoom.';
+					$this->howLabel->CSSBorder ='0px solid #777';	
+					$this->howLabel->Click = null;
 			
 		}
 				
