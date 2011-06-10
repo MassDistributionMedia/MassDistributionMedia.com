@@ -76,7 +76,7 @@ class Moving extends WebPage
 					$this->howZoomPanel->CSSPosition = 'fixed';
 					Animate::Size($this->howZoomPanel, 17, 55, 777, 777, 303);
 					
-					Animate::Size($this->zoomHowLabel, 17, 55, 777, 555, 303);
+					Animate::Size($this->howLabel, 17, 55, 777, 555, 303);
 					$this->zoomHowLabel->Cursor= Cursor::Hand;
 					$this->zoomHowLabel->Text= 'H <br> E <br> L <br> P';
 					$this->zoomHowLabel->CSSBorder ='2px solid #777';
