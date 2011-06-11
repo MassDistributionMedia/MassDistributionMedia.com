@@ -5,7 +5,7 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-	public $pmPanel, $ctrlImg, $mouseImg, $howLabel, $closeHow, $mdmLogo, $zoomHowPlus, $innerPanel, $howPanel, $nextArrowButton, $arrowImg, $backArrowButton, $homeLink, $aboutLink, $contactLink, $servicesLink, $headerPanel, $innerPanel, $backResetButton, $zeroKey, $mdmLabel, $closeHowButton, $zoomArrowButton, $backButton, $nextButton;
+	public $pmPanel, $ctrlImg, $mouseImg, $howLabel, $closeHow, $mdmLogo, $zoomHowPlus, $innerPanel, $howPanel, $arrowImg, $innerPanel, $zeroKey, $mdmLabel, $backButton, $nextButton;
 	
 	
 	function Moving()
@@ -207,13 +207,13 @@ class Moving extends WebPage
 				->CasCSSBorderRadius("2px"); */
 				$this->nextButton->Click = new ServerEvent($this, 'arrowReset'); 
 				
-				$this->innerPanel->Controls->Add($this->backArrowButton = new Button("Back", 397, 267, null, null));
-				$this->backArrowButton->CasBackColor('#E1E0E0')
+				$this->innerPanel->Controls->Add($this->backButton = new Button("Back", 397, 267, null, null));
+				$this->backButton->CasBackColor('#E1E0E0')
 				->CasColor('#333333')
 				->CasCSSFontWeight('bold')
 				->CasCSSPadding('4px')
 				->CasCSSBorderRadius("2px");
-				$this->backArrowButton->Click = new ServerEvent($this, 'arrowZoom');
+				$this->backButton->Click = new ServerEvent($this, 'arrowZoom');
 					
 				}			
 				
@@ -260,7 +260,7 @@ class Moving extends WebPage
 			    ->CasCSSFontWeight('bold')
 				->CasCSSPadding('4px')
 				->CasCSSBorderRadius("2px"); */
-				$this->backResetButton->Click = new ServerEvent($this, 'resetArrow');
+				$this->backButton->Click = new ServerEvent($this, 'resetArrow');
 					
 				}			
 
