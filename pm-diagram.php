@@ -104,23 +104,19 @@ class Moving extends WebPage
 		}
 				
 		public function zoomArrows(){
-					$this->innerPanel->Visible = false;
 					$this->howArrows();
 				}
 				
 		public function arrowZoom(){
-					$this->innerPanel->Visible = false;
-					$this->innerPanel->Visible = true;
+					$this->howZoom();
 				}
 				
 		public function arrowReset(){
-					$this->innerPanel->Visible = false;
 					$this->howReset();
 				}
 				
 		public function resetArrow(){
-					$this->innerPanel->Visible = true;
-					$this->innerPanel->Visible = false;
+					$this->howArrows();
 				}
 				
 				public function howZoom(){
@@ -175,25 +171,25 @@ class Moving extends WebPage
 				} 
 				
 				public function howArrows(){
-				$this->howPanel->Controls->Add($this->innerPanel = new Panel(null, null, null, null));
+			/*	$this->howPanel->Controls->Add($this->innerPanel = new Panel(null, null, null, null));
 				$this->innerPanel->CasWidth(555)
 				->CasHeight(303)
 				->CasBackColor('#fff')
-				->CasCSSPadding('7px');
+				->CasCSSPadding('7px'); */
 				
 				$this->innerPanel->Controls->Add($this->arrowImg = new Image("http://png.161.be/dec-arrow-keys.png", 137, 57, '50%', null));
 
-				$this->innerPanel->Controls->Add($this->howLabel = new Label("Use the arrow keys to navigate the diagram."));
-				$this->howLabel->CasCSSFontSize(17)
+				$this->innerPanel->Controls->Add($this->howLabel =("Use the arrow keys to navigate the diagram."));
+			/*	$this->howLabel->CasCSSFontSize(17)
 				->CasWidth('100%')
 				->CasHeight(14)
 				->CasCSSFontWeight('bold')
 				->CasCSSPadding('11px 13px')
 				->CasBackColor('#F1F1F1') 
 				->CasCSSDisplay('block') 
-				->CasCursor(Cursor::Move);
+				->CasCursor(Cursor::Move); */
 				
-				$this->innerPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+			/*	$this->innerPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
 				$this->mdmLabel->CasSetLocation(513, 13)
 				->CasCSSFontSize(17)
 				->CasHeight(14)
@@ -201,14 +197,14 @@ class Moving extends WebPage
 				->CasColor('#777')
 				->CasOpacity(7)
 				->CasFont('Impact, Arial')
-				->CasCursor(Cursor::Move);
+				->CasCursor(Cursor::Move); */
 				
-				$this->innerPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
+			/*	$this->innerPanel->Controls->Add($this->nextButton = new Button("Next", 449, 267, null, null));
 				$this->nextButton->CasBackColor('#E1E0E0')
 				->CasColor('#333333')
 				->CasCSSFontWeight('bold')
 				->CasCSSPadding('4px')
-				->CasCSSBorderRadius("2px");
+				->CasCSSBorderRadius("2px"); */
 				$this->nextButton->Click = new ServerEvent($this, 'arrowReset'); 
 				
 				$this->innerPanel->Controls->Add($this->backArrowButton = new Button("Back", 397, 267, null, null));
@@ -222,33 +218,33 @@ class Moving extends WebPage
 				}			
 				
 				public function howReset(){
-				$this->howPanel->Controls->Add($this->innerPanel = new Panel(null, null, null, null));
+			/*	$this->howPanel->Controls->Add($this->innerPanel = new Panel(null, null, null, null));
 				$this->innerPanel->CasWidth(555)
 				->CasHeight(303)
 				->CasBackColor('#fff')
-				->CasCSSPadding('7px');
+				->CasCSSPadding('7px'); */
 				
 				
 				$this->innerPanel->Controls->Add($this->zeroKey = new Image("http://png.161.be/zero_key.png", 393, 113, null, 81));
 								
-                $this->innerPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 77, 111, 145, null));
-				$this->innerPanel->Controls->Add($this->zoomHowPlus = new Label("+"));
+             /*   $this->innerPanel->Controls->Add($this->ctrlImg = new Image("http://png.161.be/ctrl_key.png", 77, 111, 145, null)); */
+			/*	$this->innerPanel->Controls->Add($this->zoomHowPlus = new Label("+")); */
 				$this->zoomHowPlus->CasCSSMargin('133px 277px') 
-				->CasFontSize(33)
+			/*	->CasFontSize(33)
 				->CasWidth('100%')
-				->CasHeight('100%');
+				->CasHeight('100%'); */
 
-				$this->innerPanel->Controls->Add($this->howLabel = new Label("Press \"Control + 0\" to reset zoom."));
-				$this->howLabel->CasCSSFontSize(17)
+				$this->innerPanel->Controls->Add($this->howLabel = ("Press \"Control + 0\" to reset zoom."));
+			/*	$this->howLabel->CasCSSFontSize(17)
 				->CasWidth('100%')
 				->CasHeight(14)
 				->CasCSSFontWeight('bold')
 				->CasCSSPadding('11px 13px')
 				->CasBackColor('#F1F1F1') 
 				->CasCSSDisplay('block') 
-				->CasCursor(Cursor::Move);
+				->CasCursor(Cursor::Move); */
 				
-				$this->innerPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
+			/*	$this->innerPanel->Controls->Add($this->mdmLabel = new Label("MDM"));
 				$this->mdmLabel->CasSetLocation(513, 13)
 				->CasCSSFontSize(17)
 				->CasHeight(14)
@@ -256,14 +252,14 @@ class Moving extends WebPage
 				->CasColor('#777')
 				->CasOpacity(7)
 				->CasFont('Impact, Arial')
-				->CasCursor(Cursor::Move);
+				->CasCursor(Cursor::Move); */
 				
-				$this->innerPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
+			/*	$this->innerPanel->Controls->Add($this->backResetButton = new Button("Back", 449, 267, null, null));
 				$this->backResetButton->CasBackColor('#E1E0E0')
 				->CasColor('#333333')
 			    ->CasCSSFontWeight('bold')
 				->CasCSSPadding('4px')
-				->CasCSSBorderRadius("2px");
+				->CasCSSBorderRadius("2px"); */
 				$this->backResetButton->Click = new ServerEvent($this, 'resetArrow');
 					
 				}			
