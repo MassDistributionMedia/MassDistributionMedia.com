@@ -42,9 +42,9 @@ class acmHome extends WebPage
 		 609.865.9200 <br>
 4081 S. Broad Street <br>
 Yardville, NJ 08620 <br></strong>
-		'));
+		', 33, 33));
 		$this->contactLabel->CasFont('News Cycle, Arial')
-		->CasFontSize(17)
+		->CasFontSize(13)
 		->CasLayout(Layout::Relative)
 		->CasSetSize('100%', '100%');
 
