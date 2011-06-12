@@ -4,7 +4,7 @@ require_once('NOLOH/NOLOH.php');
 
 class acmHome extends WebPage 
 {
-	private $amcLogo;
+	private $amcLogo, $contactLabel;
 	
 	function acmHome()
 	{
@@ -31,8 +31,18 @@ class acmHome extends WebPage
 		
 		$this->CSSFiles->Add('http://161.be/ac/style.css');
 		
-		$this->Controls->Add($this->amcLogo = new Image("http://161.be/ac/acm_logo.jpg", System::Auto, System::Auto, null, null));
+		$this->Controls->Add($this->amcLogo = new Image("http://161.be/ac/acm_logo.jpg", '33%', '33%', null, null));
 		$this->amcLogo->Layout= System::Auto;
+		
+		$this->Controls->Add($this->contactLabel = new Label('ACMarketingServices.com is UNDER CONSTRUCTION. <br><br>
+		 But please drop us a line via the following: <br><br>
+		 April Sette - sette.acmarketing@gmail.com <br>
+		 Cathy Campbell - campbell.acmarketing@gmail.com <br>
+		 609.865.9200 <br>
+4081 S. Broad Street <br>
+Yardville, NJ 08620 <br>
+		'));
+
 		
 	}
 	
