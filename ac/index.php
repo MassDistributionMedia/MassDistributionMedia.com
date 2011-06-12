@@ -32,7 +32,7 @@ class acmHome extends WebPage
 		$this->CSSFiles->Add('http://ac.161.be/style.css');
 		
 		$this->Controls->Add($this->amcLogo = new Image("http://161.be/ac/acm_logo.jpg", '100%', 39, null, null));
-		$this->amcLogo->Layout= Layout::Center;
+		$this->amcLogo->Layout= System::Auto;
 		
 	}
 	
