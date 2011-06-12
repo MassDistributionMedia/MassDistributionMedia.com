@@ -1,6 +1,6 @@
 <?php
 
-require_once('NOLOH/NOLOH.php');
+require_once('../NOLOH/NOLOH.php');
 
 class Moving extends WebPage 
 {
