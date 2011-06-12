@@ -2,7 +2,7 @@
 
 require_once('NOLOH/NOLOH.php');
 
-class Moving extends WebPage 
+class acmHome extends WebPage 
 {
 	private $amcLogo;
 	
