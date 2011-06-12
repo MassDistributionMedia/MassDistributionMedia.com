@@ -33,7 +33,7 @@ class acmHome extends WebPage
 		$this->CSSFiles->Add('http://fonts.googleapis.com/css?family=News+Cycle');
 		
 		$this->Controls->Add($this->amcLogo = new Image("http://161.be/ac/acm_logo.jpg", null, 33, null, null));
-		$this->amcLogo->Layout= Layout::Center;
+		$this->amcLogo->Layout= System::Auto;
 		
 		$this->Controls->Add($this->contactLabel = new Label('ACMarketingServices.com is UNDER CONSTRUCTION. <br><br>
 		 But please drop us a line via the following: <br><br><strong>
