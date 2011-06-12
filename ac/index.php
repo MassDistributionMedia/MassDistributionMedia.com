@@ -8,7 +8,7 @@ class acmHome extends WebPage
 	
 	function acmHome()
 	{
-		parent::WebPage('AC Marketing - UNDER CONSTRUCTION');
+		parent::WebPage('AC Marketing - UNDER CONSTRUCTION', 'New Jersey Marketing, Marketing, Art All Night, Events, Event Planning, NJ, New Jersey', 'THE marketing company in New Jersey, directors of Art All Night along with many others', 'http://161.be/ac/favicon.ico');
 		
 	/*	$nav = new Panel(0, 104, 1673, 30);
 		
