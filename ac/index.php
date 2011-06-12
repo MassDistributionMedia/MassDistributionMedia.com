@@ -1,10 +1,10 @@
 <?php
 
-require_once('../NOLOH/NOLOH.php');
+require_once('NOLOH/NOLOH.php');
 
 class Moving extends WebPage 
 {
-	
+	private $amcLogo;
 	
 	function acmHome()
 	{
@@ -31,9 +31,11 @@ class Moving extends WebPage
 		
 		$this->CSSFiles->Add('http://ac.161.be/style.css');
 		
-		$this->Controls->Add($this->mdmLogo = new Image("http://ac.161.be/acm_logo.jpg", '100%', 39, null, null));
-		$this->mdmLogo->Layout= Layout::Center;
+		$this->Controls->Add($this->amcLogo = new Image("http://ac.161.be/acm_logo.jpg", '100%', 39, null, null));
+		$this->amcLogo->Layout= Layout::Center;
 		
 	}
 	
 }
+
+?>
