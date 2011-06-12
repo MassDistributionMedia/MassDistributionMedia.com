@@ -30,18 +30,23 @@ class acmHome extends WebPage
 		$nav->CSSTextAlign = 'center'; */
 		
 		$this->CSSFiles->Add('http://161.be/ac/style.css');
+		$this->CSSFiles->Add('http://fonts.googleapis.com/css?family=News+Cycle');
 		
 		$this->Controls->Add($this->amcLogo = new Image("http://161.be/ac/acm_logo.jpg", '33%', '33%', null, null));
 		$this->amcLogo->Layout= System::Auto;
 		
 		$this->Controls->Add($this->contactLabel = new Label('ACMarketingServices.com is UNDER CONSTRUCTION. <br><br>
-		 But please drop us a line via the following: <br><br>
+		 But please drop us a line via the following: <br><br><strong>
 		 April Sette - sette.acmarketing@gmail.com <br>
 		 Cathy Campbell - campbell.acmarketing@gmail.com <br>
 		 609.865.9200 <br>
 4081 S. Broad Street <br>
-Yardville, NJ 08620 <br>
+Yardville, NJ 08620 <br></strong>
 		'));
+		$this->contactLabel->Font('News Cycle')
+		->FontSize(17)
+		->Layout(Layout::Relative)
+		->SetSize('100%', '100%');
 
 		
 	}
