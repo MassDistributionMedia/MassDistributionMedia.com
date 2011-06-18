@@ -1,1 +1,0 @@
-function _NObserve(e,d,b){var c=[d,b!=null?b:d],a=_N.Observes;if(a==null){a=_N.Observes={id:[c]}}if(a[e]==null){a[e]=[c]}else{a[e].push(c)}}function _NObserveSave(){var f,b=_N.Observes,d,a,e,c;for(var f in b){d=_N(f);if(d==null){if(b.length==1){_N.Observes=null}else{delete _N.Observes[f]}}else{a=b[f];e=a.length;for(c=0;c<e;++c){_NSave(f,a[c][1],d[a[c][0]])}}}};

@@ -1,1 +1,0 @@
-function _NEvteeSetP(d,c){var a=0,b=_N(d);while(a<c.length){_NChangeByObj(b,c[a++],c[a++])}};

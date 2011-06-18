@@ -1,1 +1,0 @@
-function _NSfSet(h,b,d){var e=_N(h),g=arguments.length,c,a,f;for(c=3;c<g;++c){f=e[a=arguments[c]];e=(!f)?e[a]=[]:f}return e[b]=d};
