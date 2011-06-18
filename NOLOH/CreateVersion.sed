@@ -1,0 +1,1 @@
+sed -i -r "s/(function GetNOLOHVersion\(\)[[:space:]]*\{[[:space:]]*return ').*?(';[[:space:]]*\})/\1$(darcs query tags | head -n 1).$(($(darcs changes --from-tag $(darcs query tags | head -n 1) | grep -c '^$')))\2/"  NOLOH.php
