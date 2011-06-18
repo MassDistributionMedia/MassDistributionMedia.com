@@ -41,6 +41,7 @@ class Moving extends WebPage
 		$nav->CSSTextAlign = 'center';
 		
         $group = new Group();
+        
         $this->Controls['hP'] = $this->howPanel = new Panel(222, 133, 555, 303);
         $this->howPanel->CasCSSBorder('7px solid #777')
     			->CasCSSBorderRadius('7px');
@@ -64,12 +65,8 @@ class Moving extends WebPage
 				->CasCSSPadding('4px')
 				->CasCSSBorderRadius("2px");
 		$this->closeHow->Click = new ServerEvent($this, 'closeZ');
-                
-        $this->howPanel->Controls->Add($this->zoomPanel = new Panel(null, null, null, null));
-        $this->howPanel->Controls->Add($this->arrowPanel = new Panel(null, null, null, null));
-        $this->howPanel->Controls->Add($this->resetPanel = new Panel(null, null, null, null));
         
-        $group->AddRange($howPanel, $zoomPanel, $arrowPanel, $resetPanel);
+        $group->AddRange($howPanel, 'zoom', 'arrow', 'reset');
         
         $this->nav1 = new NavHandler($howPanel, new ServerEvent($this, 'Create Section'), $group);
         
