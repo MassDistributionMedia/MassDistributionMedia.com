@@ -1,6 +1,6 @@
 <?php
 //Path to NOLOH on your system, this is our test path.
-require_once(NOLOH/NOLOH.php');
+require_once('NOLOH/NOLOH.php');
 /*
  * Path to NavHandler Nodule, only necessary if the NavHandler
  * nodule is not placed in the NOLOH nodules folder.
