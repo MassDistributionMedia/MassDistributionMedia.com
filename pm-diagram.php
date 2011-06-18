@@ -5,9 +5,9 @@ require_once('NOLOH/NOLOH.php');
 class Moving extends WebPage 
 {
 
-    public $pmPanel, $ctrlImg, $mouseImg, $closeHow, $mdmLogo, $zoomHowPlus,
-    $howPanel, $arrowImg, $zoomPanel, $arrowPanel, $resetPanel, $zeroKey, $mdmLabel, 
-    $nav1, $zoomLabel, $arrowLabel, $resetLabel,
+    public $ctrlImg, $mouseImg, $closeHow, $mdmLogo, $zoomHowPlus,
+    $arrowImg, $zoomPanel, $arrowPanel, $resetPanel, $zeroKey, 
+    $nav1, $zoomLabel, $arrowLabel, $resetLabel, $mdmLabel, $howPanel, $pmPanel,
     $zoomArrowButton, $arrowResetButton, $resetArrowButton, $arrowZoombutton;
 	
 	
